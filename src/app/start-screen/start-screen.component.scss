@@ -1,0 +1,152 @@
+$bgColor: rgb(20, 29, 47);
+$mainColor: rgb(75, 71, 255);
+$secondColor: rgb(0, 190, 232);
+
+
+.startScreenContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bgColor;
+    width: 100vw;
+    max-width: 100%;
+    height: 120vh;
+    position: relative;
+    color: white;
+    margin-bottom: 60px;
+    
+    .coloredParts{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $bgColor;
+        width: 100vw;
+        max-width: 100%;
+        height: 140vh;
+        box-sizing: border-box;
+        overflow-x: hidden;
+
+        .blueColorSpot{
+            position: absolute;
+            width: 405px;
+            height: 490px;
+            top: 100px;
+            left: -205px;
+            
+        }
+
+        .greenColorSpot{
+            position: absolute;
+            width: 475px;
+            height: 490px;
+            top: 290px;
+            right: -275px;
+            
+        }
+    }
+
+    .aboveTheFold{
+        z-index: 80;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20vh;
+
+        .iAm{
+            transform: rotate(-90deg);
+            font-size: 35px;
+            width: max-content;
+        }
+
+        .introContainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 24px;
+
+            .name{
+                font-size: 40px;
+                font-weight: 900;
+                width: max-content;
+            }
+
+            .job{
+                font-size: 29px;
+                color: $mainColor;
+            }
+        }
+    }
+
+    .talkBtn{
+        background-color: $secondColor;
+        font-size: 16px;
+        padding: 16px 24px;
+        border-radius: 10px;
+        z-index: 80;
+        margin-top: 16vh;
+
+    }
+
+    .socialMediaContainer{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 42px;
+        z-index: 80;
+        position: absolute;
+        bottom: 16px;
+        left: 0;
+        width: 100%;
+        margin-top: 0vh;
+        
+        .blueLine{
+            background-color: $secondColor;
+            height: 4px;
+            width: 100px;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+
+        img{
+            height: 30px;
+            width: 30px;
+            cursor: pointer;
+            transition: 0.2s ease-in-out;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    @media only screen and (max-width: 450px) {
+        .name{
+            font-size: 35px !important;
+        }
+        .job{
+            font-size: 24px !important;
+        }
+        .iAm{
+            font-size: 32px !important;
+        }
+    }
+
+    @media only screen and (max-width: 380px) {
+        .introContainer{
+            gap: 16px !important;
+        }
+        .name{
+            font-size: 28px !important;
+        }
+        .job{
+            font-size: 22px !important;
+        }
+        .iAm{
+            font-size: 30px !important;
+        }
+    }
+}
+
+

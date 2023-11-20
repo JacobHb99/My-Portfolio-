@@ -1,0 +1,27 @@
+<section  class="aboutMeSection">
+    <img *ngIf="home.isDesktop" class="vectorFullsreen" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
+
+
+    <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="aboutMeText">
+        <h2 [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}">About me</h2>
+        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, porro facere impedit autem repudiandae perspiciatis omnis laborum ad molestias quo excepturi optio dicta quas numquam sint doloribus, quos alias. Nemo?</span>
+        
+        <div class="personalText">
+            <img src="../../assets/images/icons/light_bulb_blue.png" alt="">
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, dolorum suscipit odio neque laudantium nam quasi exercitationem qui nostrum unde velit perspiciatis nesciunt deserunt quas error distinctio placeat dignissimos. Maxime!</span>
+        </div>
+
+        <div class="personalText">
+            <img src="../../assets/images/icons/puzzle_blue.png" alt="">
+            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, dolorum suscipit odio neque laudantium nam quasi exercitationem qui nostrum unde velit perspiciatis nesciunt deserunt quas error distinctio placeat dignissimos. Maxime!</span>
+        </div>
+    </div>
+
+    <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="personalImageContainer">
+        <img class="imgColorBg" src="../../assets/images/coloredBgParts/Group 2.png" alt="">
+        <img class="personalImg" src="../../assets/images/personal_imgs/hero character photo.png" alt="">
+        
+        <img *ngIf="home.isMobile" class="vector" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
+    </div>
+
+</section>

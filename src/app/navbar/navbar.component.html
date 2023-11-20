@@ -1,0 +1,32 @@
+<section class="header">
+    <div class="logo">Jacob</div>
+
+    <div *ngIf="home.isDesktop || home.isTablet" class="navbar">
+        <a href="">About me</a>
+        <a href="">Skills</a>
+        <a href="">Portfolio</a>
+    </div>
+
+    <div #$nav id="nav" class="navigation">
+        <div class="navigation__inner">
+          <!--  Hamburger-Menu-Content   -->
+          <a href="">About me</a>
+          <a href="">Skills</a>
+          <a href="">Portfolio</a>
+        </div>
+    </div>
+
+    <div #$btn *ngIf="home.isMobile" (click)="this.animmateNavIcon()" id="show">
+        <div #$hamburger class="hamburger" id="hamburger-1">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </div>
+    </div>
+
+    
+
+
+
+
+</section>

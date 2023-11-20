@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+$bgColor: rgb(20, 29, 47);
+$mainColor: rgb(75, 71, 255);
+$secondColor: rgb(0, 190, 232);
+
+
+html, body { height: 100%; }
+body {
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: $bgColor;
+    max-width: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+ }
+
+ .d-none{
+    display: none !important;
+ }
+
+
+ .wrapActive-40{
+    width: calc(40%) !important;
+}
+
+.wrapActive-50{
+    width: calc(50%) !important;
+}
+
+.wrapActive-60{
+    width: calc(60%) !important;
+}
+
+.padding{
+    padding: 0 10% 0 10%;
+}
+
+.justify-between{
+    justify-content: space-between !important;
+}
+
+.desktopHeadlines{
+    font-size: 90px !important;
+}
+
+
+.btn{
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    width: fit-content;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.alignItemsStart{
+    align-items: flex-start !important;
+}
+
+.text-align-left{
+    text-align: left !important;
+}

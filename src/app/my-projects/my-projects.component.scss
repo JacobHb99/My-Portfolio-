@@ -1,0 +1,142 @@
+$bgColor: rgb(20, 29, 47);
+$mainColor: rgb(75, 71, 255);
+$secondColor: rgb(0, 190, 232);
+
+section {
+    color: white;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .headlineContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .blueLineShortContainer {
+            display: flex;
+            justify-content: flex-end;
+            width: 25%;
+
+            .blueLineShort {
+                height: 4px;
+                width: 100%;
+                background-color: $mainColor;
+            }
+        }
+
+        .headline {
+            width: 50%;
+            font-size: 45px;
+            font-weight: 700;
+            text-align: center;
+            padding: 10px 0 10px 0;
+        }
+
+        .blueLineLongContainer {
+            background-color: brown;
+            width: 25%;
+            display: flex;
+            justify-content: flex-end;
+
+            .blueLineLong {
+                height: 4px;
+                width: 100%;
+                background-color: $mainColor;
+            }
+
+        }
+    }
+
+    .portfolioDescription{
+        margin-top: 60px;
+        font-size: 16px;
+    }
+
+    .projectsContainer {
+        width: 80%;
+
+        
+        .project {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+
+            .projectImgContainer{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    max-width: 390px;
+                    object-fit: contain;
+                }
+            }
+            
+
+
+            .projectInfosContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 16px;
+
+                .projectName {
+                    font-size: 32px;
+                    font-weight: 700;
+                    color: $mainColor;
+                }
+
+                .projectSkill {
+                    color: $secondColor;
+                    font-size: 24px;
+                    text-align: center;
+                    line-height: normal
+                }
+
+                .projectInfo {
+                    text-align: center;
+                    font-size: 16px;
+                }
+
+                .btnContainer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 50px;
+
+
+                    .gitBtn {
+                        border: 2px solid $secondColor;
+                        text-align: center;
+                        min-width: max-content;
+                    }
+
+                    .liveBtn {
+                        background-color: $mainColor;
+                        text-align: center;
+                        min-width: max-content;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.seperator {
+    background-color: $secondColor;
+    width: 100%;
+    height: 4px;
+    margin-top: 60px;
+}
+

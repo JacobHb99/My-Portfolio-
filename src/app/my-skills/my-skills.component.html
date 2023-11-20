@@ -1,0 +1,34 @@
+<section  class="skillsSection">
+
+    <div  class="skillsContainer">
+        
+    
+    
+    
+        <div [ngClass]="{'wrapActive-50': home.isDesktop, 'iconsGapDesktop': home.isDesktop}" class="skillsIconsContainer">
+            <div [ngClass]="{'iconsDesktop': home.isDesktop}" class="icons">
+                <div class="skillContainer" *ngFor="let skill of skills; let i = index">
+                    <img [ngClass]="{'iconsImgDesktop': home.isDesktop || home.isTablet}" src="{{ skill.path }}" alt="">
+                    <span>{{ skill.skill }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="skillsTextContainer">
+            <div class="headline">
+                <div [ngClass]="{'desktopHeadlines': home.isDesktop}" class="skillHeadline">My Skills</div>
+                <div [ngClass]="{'skillsLine': home.isDesktop}" class="greenLine"></div>
+            </div>
+    
+            <div [ngClass]="{'paddingDesktop25': home.isDesktop}" class="skillsText">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum officiis error id nihil, facilis, rem architecto veritatis sit odio totam, numquam ipsum nesciunt?
+            </div>
+            
+            <div *ngIf="home.isDesktop" class="getinTouchBtn mr-10">Get in touch</div>
+        </div>
+    </div>
+
+    <div *ngIf="home.isMobile" class="getinTouchBtn">Get in touch</div>
+
+</section>
+

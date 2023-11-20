@@ -1,0 +1,151 @@
+$bgColor: rgb(20, 29, 47);
+$mainColor: rgb(75, 71, 255);
+$secondColor: rgb(0, 190, 232);
+
+
+.skillsSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    position: relative;
+    z-index: 82;
+
+    .skillsContainer {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        align-items: center;
+        width: 100%;
+
+
+        .skillsTextContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 57px;
+
+            .headline {
+                display: flex;
+                justify-content: flex-end;
+                width: 100vw;
+                max-width: 100%;
+                gap: 10px;
+
+                .skillHeadline {
+                    font-size: 45px;
+                    font-weight: 700;
+                    width: 100%;
+                    text-align: end;
+                    min-width: fit-content;
+                }
+
+                .greenLine {
+                    width: calc(10% - 10px);
+                    height: 4px;
+                    border-bottom-left-radius: 2px;
+                    border-top-left-radius: 2px;
+                    background-color: $secondColor;
+                }
+            }
+
+            .skillsText {
+                text-align: end;
+                font-size: 16px;
+                margin: 0 10% 0 10%;
+            }
+            
+
+        }
+
+        .skillsIconsContainer {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            .icons{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: center;
+                width: 80%;
+                padding: 37px 0 37px 0;
+                gap: 40px;
+
+                .skillContainer {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 60px;
+                    gap: 10px;
+    
+    
+                    img {
+                        height: 45px;
+                        width: 45px;
+                    }
+    
+                    span {
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+            }
+            
+        }
+    }
+
+
+    .getinTouchBtn {
+        background-color: $secondColor;
+        padding: 15px 30px;
+        border-radius: 10px;
+        transition: all 0.2s ease-in-out;
+        width: fit-content;
+
+        &:hover {
+            background-color: $mainColor;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.skillsLine{
+    width: calc(30% - 0px) !important;
+}
+
+.paddingDesktop25{
+    padding-right: calc(25% - 0px) !important;
+    font-size: 16px;
+    margin: 0 !important;
+}
+
+.iconsGapDesktop{
+    column-gap: 123px !important;
+    justify-content: flex-start !important;
+    padding-left: 10%;
+}
+
+.iconsDesktop{
+    width: 100% !important;
+    column-gap: 100px !important;
+    justify-content: flex-start !important;
+}
+
+.iconsImgDesktop{
+    height: 60px !important;
+    width: 60px !important;
+}
+
+.mr-10{
+    margin-right: 10% !important;
+}
+
+
