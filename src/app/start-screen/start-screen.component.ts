@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HomeComponent } from '../home/home.component';
+
 
 @Component({
   selector: 'app-start-screen',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./start-screen.component.scss']
 })
 export class StartScreenComponent {
+  constructor(public home: HomeComponent) {
 
+  }
 }

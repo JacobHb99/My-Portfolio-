@@ -19,9 +19,17 @@ $secondColor: rgb(0, 190, 232);
     max-width: 100%;
 
     .logo{
-        font-size: 30px;
+        font-size: 45px;
         font-weight: 800;
         z-index: 99;
+
+        .c{
+          color: $mainColor;
+        }
+
+        .b{
+          color: $secondColor;
+        }
     }
 
     .navbar{

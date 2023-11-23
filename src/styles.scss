@@ -39,8 +39,12 @@ body {
     justify-content: space-between !important;
 }
 
+.gap40{
+    gap: 40px !important; 
+}
+
 .desktopHeadlines{
-    font-size: 90px !important;
+    font-size: 80px !important;
 }
 
 
@@ -61,4 +65,20 @@ body {
 
 .text-align-left{
     text-align: left !important;
+}
+
+.font64{
+    font-size: 64px !important;
+}
+
+.font90{
+    font-size: 80px !important;
+}
+
+.font120{
+    font-size: 88px !important;
+}
+
+.paddingLeft{
+    padding-left: 40px;
 }

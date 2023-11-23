@@ -6,11 +6,11 @@
 
     
     <div class="aboveTheFold">
-        <div class="iAm">I am</div>
+        <div [ngClass]="{'font90': home.isDesktop}" class="iAm">I am</div>
         
         <div class="introContainer">
-            <div class="name">Jacob Hengsbach</div>
-            <div class="job">FRONTEND DEVELOPER</div>
+            <div [ngClass]="{'font120': home.isDesktop}" class="name">Jacob Hengsbach</div>
+            <div [ngClass]="{'font64': home.isDesktop}" class="job">FRONTEND DEVELOPER</div>
         </div>
     </div>
 
@@ -18,9 +18,15 @@
 
     <div class="socialMediaContainer">
         <div class="blueLine"></div>
-        <img src="../../assets/images/socialIcons/git_icon.png" alt="">
-        <img src="../../assets/images/socialIcons/mail_icon.png" alt="">
-        <img src="../../assets/images/socialIcons/linkedIn_icon.png" alt="">
+        <a href="https://github.com/JacobHb99" target="_blank" rel="noopener noreferrer">
+            <img src="../../assets/images/socialIcons/git_icon.png" alt="">
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="../../assets/images/socialIcons/mail_icon.png" alt="">
+        </a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+            <img src="../../assets/images/socialIcons/linkedIn_icon.png" alt="">
+        </a>
     </div>
 
 </section>

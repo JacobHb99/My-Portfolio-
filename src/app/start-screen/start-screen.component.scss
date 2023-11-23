@@ -30,10 +30,10 @@ $secondColor: rgb(0, 190, 232);
 
         .blueColorSpot{
             position: absolute;
-            width: 405px;
-            height: 490px;
-            top: 100px;
-            left: -205px;
+            width: 420px;
+            height: 590px;
+            top: 200px;
+            left: -185px;
             
         }
 
@@ -53,29 +53,34 @@ $secondColor: rgb(0, 190, 232);
         justify-content: center;
         align-items: center;
         margin-top: 20vh;
+        width: 100%;
 
         .iAm{
             transform: rotate(-90deg);
+            transform-origin: center center;
             font-size: 35px;
             width: max-content;
+            height: min-content;
         }
 
         .introContainer{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
             align-items: flex-start;
-            gap: 24px;
+            line-height: normal;
 
             .name{
                 font-size: 40px;
                 font-weight: 900;
                 width: max-content;
+                height: fit-content !important;
             }
 
             .job{
                 font-size: 29px;
                 color: $mainColor;
+                height: fit-content !important;
             }
         }
     }
@@ -87,6 +92,12 @@ $secondColor: rgb(0, 190, 232);
         border-radius: 10px;
         z-index: 80;
         margin-top: 16vh;
+        transition: all 0.2s ease-in-out;
+
+        &:hover{
+            transform: scale(1.1);
+            background-color: $mainColor;
+        }
 
     }
 
@@ -94,7 +105,6 @@ $secondColor: rgb(0, 190, 232);
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 42px;
         z-index: 80;
         position: absolute;
         bottom: 16px;
@@ -105,9 +115,10 @@ $secondColor: rgb(0, 190, 232);
         .blueLine{
             background-color: $secondColor;
             height: 4px;
-            width: 100px;
+            width: calc(10% - 10px);
             border-top-right-radius: 2px;
             border-bottom-right-radius: 2px;
+            margin-right: 10px;
         }
 
         img{
@@ -115,6 +126,7 @@ $secondColor: rgb(0, 190, 232);
             width: 30px;
             cursor: pointer;
             transition: 0.2s ease-in-out;
+            margin-right: 40px;
 
             &:hover{
                 transform: scale(1.2);

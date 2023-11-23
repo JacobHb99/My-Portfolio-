@@ -120,12 +120,20 @@ section {
                         border: 2px solid $secondColor;
                         text-align: center;
                         min-width: max-content;
+
+                        &:hover{
+                            border: 2px solid $mainColor;
+                        }
                     }
 
                     .liveBtn {
                         background-color: $mainColor;
                         text-align: center;
                         min-width: max-content;
+
+                        &:hover{
+                            background-color: $secondColor;
+                        }
                     }
                 }
             }
