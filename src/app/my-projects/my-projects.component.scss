@@ -14,45 +14,36 @@ section {
     .headlineContainer {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
+        gap: 10px;
 
-        .blueLineShortContainer {
-            display: flex;
-            justify-content: flex-end;
-            width: 25%;
 
-            .blueLineShort {
-                height: 4px;
-                width: 100%;
-                background-color: $mainColor;
-            }
+
+        .blueLineShort {
+            height: 4px;
+            width: 10%;
+            background-color: $mainColor;
         }
 
         .headline {
-            width: 50%;
+            width: 179px;
             font-size: 45px;
             font-weight: 700;
             text-align: center;
             padding: 10px 0 10px 0;
         }
 
-        .blueLineLongContainer {
-            background-color: brown;
-            width: 25%;
-            display: flex;
-            justify-content: flex-end;
-
-            .blueLineLong {
-                height: 4px;
-                width: 100%;
-                background-color: $mainColor;
-            }
-
+        .blueLineLong {
+            height: 4px;
+            width: calc(50% - 99.5px);
+            background-color: $mainColor;
         }
+
+
     }
 
-    .portfolioDescription{
+    .portfolioDescription {
         margin-top: 60px;
         font-size: 16px;
     }
@@ -60,7 +51,7 @@ section {
     .projectsContainer {
         width: 80%;
 
-        
+
         .project {
             display: flex;
             flex-wrap: wrap;
@@ -69,7 +60,7 @@ section {
             width: 100%;
 
 
-            .projectImgContainer{
+            .projectImgContainer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -81,7 +72,7 @@ section {
                     object-fit: contain;
                 }
             }
-            
+
 
 
             .projectInfosContainer {
@@ -115,26 +106,36 @@ section {
                     justify-content: center;
                     gap: 50px;
 
+                    a {
 
-                    .gitBtn {
-                        border: 2px solid $secondColor;
-                        text-align: center;
-                        min-width: max-content;
+                        text-decoration: none;
 
-                        &:hover{
-                            border: 2px solid $mainColor;
+                        .gitBtn {
+                            border: 2px solid $secondColor;
+                            text-align: center;
+                            min-width: max-content;
+                            color: white;
+
+                            &:hover {
+                                border: 2px solid $mainColor;
+                            }
                         }
+
+                        .liveBtn {
+                            background-color: $mainColor;
+                            text-align: center;
+                            min-width: max-content;
+                            color: white;
+                            text-decoration: none;
+
+                            &:hover {
+                                background-color: $secondColor;
+                            }
+                        }
+
+
                     }
 
-                    .liveBtn {
-                        background-color: $mainColor;
-                        text-align: center;
-                        min-width: max-content;
-
-                        &:hover{
-                            background-color: $secondColor;
-                        }
-                    }
                 }
             }
         }
@@ -148,3 +149,10 @@ section {
     margin-top: 60px;
 }
 
+.desktopWidth{
+    width: 315px !important;
+}
+
+.lineWidthDesktop{
+    width: calc(50% - 157px) !important;
+}

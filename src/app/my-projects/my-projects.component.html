@@ -1,12 +1,12 @@
 <section id="projects">
     <div class="headlineContainer">
-        <div class="blueLineShortContainer">
-            <div class="blueLineShort"></div>
-        </div>
-        <div [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}" class="headline">Portfolio</div>
-        <div class="blueLineLongContainer">
-            <div class="blueLineLong"></div>
-        </div>
+
+        <div class="blueLineShort"></div>
+        
+        <div [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopWidth': home.isDesktop}" class="headline">Portfolio</div>
+        
+        <div class="blueLineLong" [ngClass]="{'lineWidthDesktop': home.isDesktop}"></div>
+        
     </div>
 
     <div class="portfolioDescription">

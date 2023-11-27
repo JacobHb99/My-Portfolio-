@@ -39,6 +39,15 @@ body {
     justify-content: space-between !important;
 }
 
+.justify-center{
+    justify-content: center !important;
+}
+
+.directionRow{
+    flex-direction: row !important;
+    height: fit-content !important;
+}
+
 .gap40{
     gap: 40px !important; 
 }
@@ -82,3 +91,6 @@ body {
 .paddingLeft{
     padding-left: 40px;
 }
+
+
+

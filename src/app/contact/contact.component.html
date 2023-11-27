@@ -1,0 +1,60 @@
+<section class="contactSection">
+    <div class="headlineContainer">
+        <div class="coloredLine"></div>
+        <h2>Contact</h2>
+    </div>
+
+    <div class="wrapContainer" [ngClass]="{'justify-between': home.isDesktop}">
+        <div class="haveAProblemContainer" [ngClass]="{'wrapActive-40': home.isDesktop}">
+            <h3>Got a Problem to solve?</h3>
+            <div>
+                If you have a problem that you need help with, contact me through this form. 
+                I look forward to help to realize your project.
+                <br>
+                <br>
+                Need a Frontenddeceloper? <b>Contact me!</b>
+            </div>
+        </div>
+
+        <form (submit)="sendMail()" [formGroup]="contactForm" method="post" class="form" #myForm ngNativeValidate [ngClass]="{'wrapActive-50': home.isDesktop}">
+            <div class="nameContainer">
+                <input type="text" formControlName="nameField" id="name" placeholder="Your name" [ngClass]="{'inputDesktop': home.isDesktop}">
+                <ng-container class="errorContainer" *ngIf="((contactForm.controls['nameField'].dirty || contactForm.controls['nameField'].touched) && !contactForm.controls['nameField'].valid)">
+                    <div class="errorContainer">
+                        <p *ngIf="(contactForm.controls['nameField'].errors?.['required'])">Bitte geben sie ihren Namen an.</p>
+                        <p *ngIf="(contactForm.controls['nameField'].errors?.['minlength'])">Der Name sollte min. aus 2 Zeichen bestehen.</p>
+                    </div>
+                </ng-container>
+            </div>
+
+            <div class="emailContainer">
+                <input type="email" formControlName="emailField" id="email" placeholder="Your e-mail" [ngClass]="{'inputDesktop': home.isDesktop}">
+                <ng-container class="errorContainer" *ngIf="((contactForm.controls['emailField'].dirty || contactForm.controls['emailField'].touched) && !contactForm.controls['emailField'].valid)">
+                    <div class="errorContainer">
+                        <p>Bitte geben sie ihre e-mail an.</p>
+                    </div>
+                </ng-container>
+            </div>
+            
+            <div class="messageContainer">
+                <textarea formControlName="messageField" id="message" cols="30" rows="10" placeholder="Your message" [ngClass]="{'textAreaSDesktop': home.isDesktop}"></textarea>
+                <ng-container *ngIf="((contactForm.controls['messageField'].dirty || contactForm.controls['messageField'].touched) && !contactForm.controls['messageField'].valid)">
+                    <div class="errorContainer">
+                        <p *ngIf="(contactForm.controls['messageField'].errors?.['required'])">Bitte beschreibe kurz dein Anliegen.</p>
+                        <p *ngIf="(contactForm.controls['messageField'].errors?.['minlength'])">Bitte erzähle ein wenig ausführlicher.</p>
+                    </div>
+                </ng-container>
+            </div>
+            
+            <div class="privatePolicyCheckContainer">
+                <input type="checkbox" formControlName="checkBox" class="checkBox">
+                <span>I have read the 
+                    <span>private policy</span>
+                    and aggree to the processing of my data as outlined.
+                </span>
+            </div>
+
+            <button type="submit" class="talkBtn" [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" #sendMailBtn>Send message :) </button>
+        </form>
+    </div>
+</section>

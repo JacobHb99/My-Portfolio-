@@ -1,0 +1,186 @@
+$bgColor: rgb(20, 29, 47);
+$mainColor: rgb(75, 71, 255);
+$secondColor: rgb(0, 190, 232);
+
+.contactSection{
+    width: 100vw;
+    max-width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16vh;
+    font-size: 16px;
+
+    .headlineContainer{
+        width: 100%;
+        gap: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 37px;
+
+        h2{
+            font-size: 45px;
+            font-weight: 700;
+            line-height: normal;
+        }
+
+        .coloredLine{
+            width: calc(10% - 10px);
+            height: 4px;
+            border-bottom-right-radius: 2px;
+            border-top-right-radius: 2px;
+            background-color: $mainColor;
+        }
+    }
+
+    .wrapContainer{
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .haveAProblemContainer{
+            margin-bottom: 60px;
+
+
+            h3{
+                font-size: 24px;
+                font-weight: 700;
+            }
+        }
+
+        .form{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            .nameContainer, .emailContainer, .messageContainer {
+                width: calc(100% - 12px);
+                height: 80px;
+                display: flex;
+                flex-direction: column;
+                justify-content: startflex-;
+                align-items: flex-start;
+
+
+                .errorContainer{
+                    
+
+                    p{
+                        font-size: 14px;
+                        color: red;
+                    }
+                }
+
+
+                input, textarea{
+                    width: calc(100% - 12px);
+                    border: 2px solid $mainColor;
+                    background-color: transparent;
+                    border-radius: 16px;
+                    color: white;
+                    font-family: Roboto;
+                    padding: 0px 6px;
+                    font-size: 16px;
+                    outline: none;
+    
+                    &.ng-touched, &.ng-dirty{
+    
+    
+                        &.ng-invalid{
+                            border: 2px solid red;
+    
+                        }
+    
+                        &.ng-valid{
+                            border: 2px solid green;
+                        }
+                    }
+    
+                }
+    
+                input{
+                    height: 40px;
+                }
+            
+                textarea{
+                    height: 162px !important;
+                    resize: none;
+                }
+            }
+
+            .messageContainer{
+                height: 202px;
+            }
+
+            
+
+            .privatePolicyCheckContainer{
+                width: 100%;
+                max-width: 600px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 10px;
+                margin-top: -21px;
+                font-size: 14px;
+
+                .checkBox{
+                    background-color: transparent;
+                    border: 2px solid $secondColor;
+                    height: 24px;
+                    width: 24px;
+                    accent-color: rgb(2, 169, 2);
+                    padding: 0;
+                    margin: 0;
+                }
+
+                span{
+
+
+                    span{
+                        color: $mainColor;
+                    }
+                }
+            }
+        }
+
+        .talkBtn{
+            background-color: $secondColor;
+            font-size: 16px;
+            padding: 16px 24px;
+            border-radius: 10px;
+            z-index: 80;
+            margin-top: 37px;
+            transition: all 0.2s ease-in-out;
+    
+            &:hover{
+                transform: scale(1.1);
+                background-color: $mainColor;
+            }
+    
+        }
+    }
+
+}
+
+.inputDesktop{
+    width: calc(100% - 12px) !important;
+    max-width: 617px !important;
+    height: 50px !important;
+}
+
+.textAreaSDesktop{
+    max-width: 617px !important;
+    height: 202px !important;
+}
+
