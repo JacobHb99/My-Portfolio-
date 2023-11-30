@@ -1,10 +1,9 @@
-<section class="startScreenContainer">
+<section class="startScreenContainer" *ngIf="!home.impressOn">
     <div class="coloredParts">
         <img class="blueColorSpot" src="../../assets/images/coloredBgParts/Purple shadow (2).png" alt="">
         <img class="greenColorSpot" src="../../assets/images/coloredBgParts/Purple shadow (1).png" alt="">
     </div>
-
-    
+ 
     <div class="aboveTheFold">
         <div [ngClass]="{'font90': home.isDesktop}" class="iAm">I am</div>
         
@@ -14,7 +13,9 @@
         </div>
     </div>
 
-    <div class="talkBtn">Let's talk!</div>
+    <div class="talkBtn">
+        <a href="#contactSection">Let's talk!</a>
+    </div>
 
     <div class="socialMediaContainer">
         <div class="blueLine"></div>
@@ -28,5 +29,4 @@
             <img src="../../assets/images/socialIcons/linkedIn_icon.png" alt="">
         </a>
     </div>
-
 </section>

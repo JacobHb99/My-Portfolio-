@@ -86,6 +86,7 @@ $secondColor: rgb(0, 190, 232);
     }
 
     .talkBtn{
+
         background-color: $secondColor;
         font-size: 16px;
         padding: 16px 24px;
@@ -94,9 +95,17 @@ $secondColor: rgb(0, 190, 232);
         margin-top: 16vh;
         transition: all 0.2s ease-in-out;
 
+        cursor: pointer;
+
+
         &:hover{
             transform: scale(1.1);
             background-color: $mainColor;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
         }
 
     }

@@ -1,7 +1,9 @@
 <section class="footerSection">
     <div class="footerContent" [ngClass]="{'directionRow': home.isDesktop ,'justify-between': home.isDesktop}">
         <div class="logo">Ja<span class="c">c</span>o<span class="b">b</span></div>
+
         <div class="copyRightContainer">@ Jacob Hengsbach 2023</div>
+
         <div class="socialMediaContainer">
             <a href="https://github.com/JacobHb99" target="_blank" rel="noopener noreferrer">
                 <img src="../../assets/images/socialIcons/git_icon.png" alt="">
@@ -14,7 +16,8 @@
             </a>
         </div>
     </div>
+
     <div class="impressum" [ngClass]="{'text-align-left': home.isDesktop}">
-        <a href="http://" target="_blank" rel="noopener noreferrer">Impressum</a>
+        <a (click)="home.showImpress()" href="#">Impressum</a>
     </div>
 </section>

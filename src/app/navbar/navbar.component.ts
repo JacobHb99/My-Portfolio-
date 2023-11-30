@@ -13,6 +13,8 @@ import { HomeComponent } from '../home/home.component';
 
 export class NavbarComponent {
 
+
+
   constructor(public home: HomeComponent) {
 
   }
@@ -24,5 +26,7 @@ export class NavbarComponent {
 
     $hamburger!.classList.toggle("is-active");
     $nav!.classList.toggle('active');
+    this.home.toggleBoolean();
+    console.log(this.home.mobileNavActice);
   }
 }

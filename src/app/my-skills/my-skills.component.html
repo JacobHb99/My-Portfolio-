@@ -1,10 +1,6 @@
-<section id="mySkills" class="skillsSection">
-
+<section id="mySkills" class="skillsSection" *ngIf="!home.impressOn">
     <div class="skillsContainer" [ngClass]="{'justify-center': home.isMobile}">
         
-    
-    
-    
         <div [ngClass]="{'wrapActive-50': home.isDesktop, 'iconsGapDesktop': home.isDesktop}" class="skillsIconsContainer">
             <div [ngClass]="{'iconsDesktop': home.isDesktop}" class="icons">
                 <div class="skillContainer" *ngFor="let skill of skills; let i = index">
@@ -19,16 +15,19 @@
                 <div [ngClass]="{'desktopHeadlines': home.isDesktop}" class="skillHeadline">My Skills</div>
                 <div [ngClass]="{'skillsLine': home.isDesktop}" class="greenLine"></div>
             </div>
-    
+
             <div [ngClass]="{'paddingDesktop25': home.isDesktop}" class="skillsText">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum officiis error id nihil, facilis, rem architecto veritatis sit odio totam, numquam ipsum nesciunt?
+                I have experience in building projects using many frontend technologies.
+                <br>
+                My priority is to constantly improve these skills, but I am never averse to new concepts.
             </div>
-            
+
             <div *ngIf="home.isDesktop" class="getinTouchBtn mr-10">Get in touch</div>
         </div>
     </div>
 
-    <div *ngIf="home.isMobile" class="getinTouchBtn">Get in touch</div>
-
+    <div *ngIf="home.isMobile" class="getinTouchBtn">
+        <a href="#contactSection">Get in touch</a>
+    </div>
 </section>
 

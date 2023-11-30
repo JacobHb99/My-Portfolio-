@@ -111,10 +111,16 @@ $secondColor: rgb(0, 190, 232);
         border-radius: 10px;
         transition: all 0.2s ease-in-out;
         width: fit-content;
+        cursor: pointer;
 
         &:hover {
             background-color: $mainColor;
             transform: scale(1.1);
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
         }
     }
 }

@@ -2,17 +2,17 @@
     <div class="logo">Ja<span class="c">c</span>o<span class="b">b</span></div>
 
     <div *ngIf="home.isDesktop || home.isTablet" class="navbar">
-        <a href="#aboutMe">About me</a>
-        <a href="#mySkills">Skills</a>
-        <a href="#projects">Portfolio</a>
+        <a href="#aboutMe" (click)="home.showContent()">About me</a>
+        <a href="#mySkills" (click)="home.showContent()">Skills</a>
+        <a href="#projects" (click)="home.showContent()">Portfolio</a>
     </div>
 
     <div #$nav id="nav" class="navigation">
         <div class="navigation__inner">
           <!--  Hamburger-Menu-Content   -->
-          <a href="#aboutMe" (click)="this.animmateNavIcon()">About me</a>
-          <a href="#mySkills" (click)="this.animmateNavIcon()">Skills</a>
-          <a href="#projects" (click)="this.animmateNavIcon()">Portfolio</a>
+          <a href="#aboutMe" (click)="this.animmateNavIcon()" (click)="home.showContent()">About me</a>
+          <a href="#mySkills" (click)="this.animmateNavIcon()" (click)="home.showContent()">Skills</a>
+          <a href="#projects" (click)="this.animmateNavIcon()" (click)="home.showContent()">Portfolio</a>
         </div>
     </div>
 
@@ -23,10 +23,4 @@
             <span class="line"></span>
           </div>
     </div>
-
-    
-
-
-
-
 </section>

@@ -1,18 +1,31 @@
-<section id="aboutMe"  class="aboutMeSection">
+<section id="aboutMe"  class="aboutMeSection" *ngIf="!home.impressOn">
     <img *ngIf="home.isDesktop" class="vectorFullsreen" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
 
     <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="aboutMeText">
         <h2 [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}">About me</h2>
-        <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, porro facere impedit autem repudiandae perspiciatis omnis laborum ad molestias quo excepturi optio dicta quas numquam sint doloribus, quos alias. Nemo?</span>
+        <span>
+            Hi I'm Jacob, passionate frontend developer with a special focus on web applications based on angular.
+            With the help of the latest technologies, I support you in turning your idea into a finished, unique product.
+            <br>
+            On my never-ending self-development in the "tec-world", I attach particular importance to a humane approach and an honest commitment to the customer.
+        </span>
         
         <div class="personalText">
             <img src="../../assets/images/icons/light_bulb_blue.png" alt="">
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, dolorum suscipit odio neque laudantium nam quasi exercitationem qui nostrum unde velit perspiciatis nesciunt deserunt quas error distinctio placeat dignissimos. Maxime!</span>
+            <span>
+                I belive that every problem should be met with a positive attitude - writing award-winning code does not happen from a "this can't be done" attitude.
+                <br>
+                I am always ready for a new challenge where I can grow as a human and expand my skill stack.
+            </span> 
         </div>
 
         <div class="personalText">
             <img src="../../assets/images/icons/puzzle_blue.png" alt="">
-            <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, dolorum suscipit odio neque laudantium nam quasi exercitationem qui nostrum unde velit perspiciatis nesciunt deserunt quas error distinctio placeat dignissimos. Maxime!</span>
+            <span>
+                The beauty of this industry is that it is full of talented and creative people.
+                <br>
+                I learn something new every day either by my own curiosity or by like-minded code enthusiasts.
+            </span>
         </div>
     </div>
 

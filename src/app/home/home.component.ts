@@ -1,23 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { distinctUntilChanged, tap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
+
 export class HomeComponent implements OnInit {
   hideMobileElements!: boolean;
   hideDesktopElements!: boolean;
   isMobile: boolean = false;
   isDesktop: boolean = false;
   isTablet: boolean = false;
-
-
+  impressOn: boolean = false;
 
   Breakpoints = Breakpoints;
   currentBreakpoint:string = '';
+  mobileNavActice: boolean = false;
 
 
   constructor(private breakpointObserver: BreakpointObserver) {
@@ -65,14 +67,28 @@ export class HomeComponent implements OnInit {
         this.isDesktop = false;
         this.isMobile = true;
         this.isTablet = false;
-
-
       }
-      console.log("mobile", this.isMobile);
+/*       console.log("mobile", this.isMobile);
       console.log("desktop", this.isDesktop);
       console.log("tablet", this.isTablet);
       console.log("breakPoints", Breakpoints);
-
-      console.log("currentBP", this.currentBreakpoint);
+      console.log("currentBP", this.currentBreakpoint); */
     })
+
+    showImpress() {
+      this.impressOn = true;
+    }
+
+    showContent() {
+      this.impressOn = false;
+    }
+
+
+    toggleBoolean() {
+      if (this.mobileNavActice) {
+        this.mobileNavActice = false;
+      } else {
+        this.mobileNavActice = true;
+      }
+    }
 }

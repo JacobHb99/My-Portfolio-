@@ -1,12 +1,9 @@
-<section id="projects">
+<section id="projects" *ngIf="!home.impressOn">
     <div class="headlineContainer">
-
         <div class="blueLineShort"></div>
-        
-        <div [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopWidth': home.isDesktop}" class="headline">Portfolio</div>
-        
+        <div [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopWidth': home.isDesktop}"
+            class="headline">Portfolio</div>
         <div class="blueLineLong" [ngClass]="{'lineWidthDesktop': home.isDesktop}"></div>
-        
     </div>
 
     <div class="portfolioDescription">
@@ -14,35 +11,28 @@
     </div>
 
     <div class="projectsContainer">
-        
-            <div class="project" *ngFor="let project of projects; let i = index" [ngClass]="{'justify-between': home.isDesktop}">
-                <div class="projectImgContainer" [ngClass]="{'wrapActive-40': home.isDesktop}">
-                    <img src="{{ project.path }}" alt="">
-                </div>
-                
-                <div class="projectInfosContainer"
-                 [ngClass]="{'alignItemsStart': home.isDesktop, 'wrapActive-60': home.isDesktop}">
-                    <div class="projectName">{{ project.project }}</div>
-                    <div class="projectSkill">{{ project.skills }}</div>
-                    <div [ngClass]="{'text-align-left': home.isDesktop}" class="projectInfo">{{ project.info }}</div>
-        
-                    <div class="btnContainer">
-                        <a href="{{ project.liveTestPath }}" target="_blank" rel="noopener noreferrer">
-                            <div class="liveBtn btn">Live test</div>
-                        </a>
-                        <a href="{{ project.gitPath }}" target="_blank" rel="noopener noreferrer">
-                            <div class="gitBtn btn">Git Hub</div>
-                        </a>
-                    </div>
-
-                </div>
-                <div *ngIf="i < projects.length - 1" class="seperator"></div>
-
+        <div class="project" *ngFor="let project of projects; let i = index"
+            [ngClass]="{'justify-between': home.isDesktop}">
+            <div class="projectImgContainer" [ngClass]="{'wrapActive-40': home.isDesktop}">
+                <img src="{{ project.path }}" alt="">
             </div>
 
-        
-        
+            <div class="projectInfosContainer"
+                [ngClass]="{'alignItemsStart': home.isDesktop, 'wrapActive-60': home.isDesktop}">
+                <div class="projectName">{{ project.project }}</div>
+                <div class="projectSkill">{{ project.skills }}</div>
+                <div [ngClass]="{'text-align-left': home.isDesktop}" class="projectInfo">{{ project.info }}</div>
+
+                <div class="btnContainer">
+                    <a href="{{ project.liveTestPath }}" target="_blank" rel="noopener noreferrer">
+                        <div class="liveBtn btn">Live test</div>
+                    </a>
+                    <a href="{{ project.gitPath }}" target="_blank" rel="noopener noreferrer">
+                        <div class="gitBtn btn">Git Hub</div>
+                    </a>
+                </div>
+            </div>
+            <div *ngIf="i < projects.length - 1" class="seperator"></div>
+        </div>
     </div>
-
-
 </section>

@@ -92,6 +92,7 @@ $secondColor: rgb(0, 190, 232);
                     padding: 0px 6px;
                     font-size: 16px;
                     outline: none;
+                    cursor: text;
     
                     &.ng-touched, &.ng-dirty{
     
@@ -142,6 +143,7 @@ $secondColor: rgb(0, 190, 232);
                     accent-color: rgb(2, 169, 2);
                     padding: 0;
                     margin: 0;
+                    cursor: pointer;
                 }
 
                 span{
@@ -149,6 +151,13 @@ $secondColor: rgb(0, 190, 232);
 
                     span{
                         color: $mainColor;
+                        transition: all 0.2s ease-in-out;
+                        cursor: pointer;
+
+                        &:hover{
+                            text-decoration: underline;
+                            text-decoration-color: $mainColor;
+                        }
                     }
                 }
             }
@@ -162,6 +171,8 @@ $secondColor: rgb(0, 190, 232);
             z-index: 80;
             margin-top: 37px;
             transition: all 0.2s ease-in-out;
+            cursor: pointer;
+
     
             &:hover{
                 transform: scale(1.1);
