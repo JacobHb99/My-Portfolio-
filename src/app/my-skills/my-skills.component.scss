@@ -13,6 +13,7 @@ $secondColor: rgb(0, 190, 232);
     margin-bottom: 120px;
     position: relative;
     z-index: 82;
+    font-size: 16px;
 
     .skillsContainer {
         display: flex;
@@ -55,7 +56,6 @@ $secondColor: rgb(0, 190, 232);
 
             .skillsText {
                 text-align: end;
-                font-size: 16px;
                 margin: 0 10% 0 10%;
             }
             
@@ -131,7 +131,6 @@ $secondColor: rgb(0, 190, 232);
 
 .paddingDesktop25{
     padding-right: calc(25% - 0px) !important;
-    font-size: 16px;
     margin: 0 !important;
 }
 

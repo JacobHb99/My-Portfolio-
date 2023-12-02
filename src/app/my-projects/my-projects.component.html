@@ -1,4 +1,4 @@
-<section id="projects" *ngIf="!home.impressOn">
+<section id="projects" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
     <div class="headlineContainer">
         <div class="blueLineShort"></div>
         <div [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopWidth': home.isDesktop}"
@@ -24,7 +24,7 @@
                 <div [ngClass]="{'text-align-left': home.isDesktop}" class="projectInfo">{{ project.info }}</div>
 
                 <div class="btnContainer">
-                    <a href="{{ project.liveTestPath }}" target="_blank" rel="noopener noreferrer">
+                    <a href="{{ project.liveTestPath }}" target="_blank" rel="noopener noreferrer" *ngIf="project.liveTestPath">
                         <div class="liveBtn btn">Live test</div>
                     </a>
                     <a href="{{ project.gitPath }}" target="_blank" rel="noopener noreferrer">

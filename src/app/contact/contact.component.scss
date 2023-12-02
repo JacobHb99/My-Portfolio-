@@ -12,6 +12,9 @@ $secondColor: rgb(0, 190, 232);
     justify-content: center;
     margin-top: 16vh;
     font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 10vh;
 
     .headlineContainer{
         width: 100%;
@@ -20,6 +23,8 @@ $secondColor: rgb(0, 190, 232);
         justify-content: flex-start;
         align-items: center;
         margin-bottom: 37px;
+        z-index: 35;
+
 
         h2{
             font-size: 45px;
@@ -44,6 +49,7 @@ $secondColor: rgb(0, 190, 232);
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
+        z-index: 35;
 
         .haveAProblemContainer{
             margin-bottom: 60px;
@@ -62,6 +68,7 @@ $secondColor: rgb(0, 190, 232);
             justify-content: center;
             align-items: center;
             gap: 10px;
+            z-index: 35;
 
             .nameContainer, .emailContainer, .messageContainer {
                 width: calc(100% - 12px);
@@ -180,7 +187,33 @@ $secondColor: rgb(0, 190, 232);
             }
     
         }
+
+        .emailConfirmContainer{
+            background-color: $bgColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-top: 37px;
+            border: 2px solid $secondColor;
+            border-radius: 10px;
+            z-index: 50;
+            gap: 24px;
+        }
     }
+
+    .coloredBgPart{
+        position: absolute;
+        bottom: -160px;
+        left: -100px;
+        height: 350px;
+        width: 300px;
+        object-fit: contain;
+        transform: rotate(90deg);
+        z-index: 30;
+    }
+
 
 }
 

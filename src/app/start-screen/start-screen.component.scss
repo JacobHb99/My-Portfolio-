@@ -94,9 +94,7 @@ $secondColor: rgb(0, 190, 232);
         z-index: 80;
         margin-top: 16vh;
         transition: all 0.2s ease-in-out;
-
         cursor: pointer;
-
 
         &:hover{
             transform: scale(1.1);
@@ -142,6 +140,7 @@ $secondColor: rgb(0, 190, 232);
             }
         }
     }
+
     @media only screen and (max-width: 450px) {
         .name{
             font-size: 35px !important;

@@ -1,4 +1,4 @@
-<section id="mySkills" class="skillsSection" *ngIf="!home.impressOn">
+<section id="mySkills" class="skillsSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
     <div class="skillsContainer" [ngClass]="{'justify-center': home.isMobile}">
         
         <div [ngClass]="{'wrapActive-50': home.isDesktop, 'iconsGapDesktop': home.isDesktop}" class="skillsIconsContainer">

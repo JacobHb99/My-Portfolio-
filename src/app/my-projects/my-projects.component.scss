@@ -10,6 +10,8 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 16px;
+    position: relative;
 
     .headlineContainer {
         width: 100%;
@@ -45,7 +47,6 @@ section {
 
     .portfolioDescription {
         margin-top: 60px;
-        font-size: 16px;
     }
 
     .projectsContainer {
@@ -59,7 +60,6 @@ section {
             align-items: center;
             width: 100%;
 
-
             .projectImgContainer {
                 display: flex;
                 justify-content: center;
@@ -72,8 +72,6 @@ section {
                     object-fit: contain;
                 }
             }
-
-
 
             .projectInfosContainer {
                 display: flex;
@@ -97,7 +95,6 @@ section {
 
                 .projectInfo {
                     text-align: center;
-                    font-size: 16px;
                 }
 
                 .btnContainer {

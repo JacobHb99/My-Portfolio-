@@ -1,7 +1,7 @@
-<section id="contactSection" class="contactSection" *ngIf="!home.impressOn">
+<section id="contactSection" class="contactSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
     <div class="headlineContainer">
         <div class="coloredLine"></div>
-        <h2>Contact</h2>
+        <h2 [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}">Contact</h2>
     </div>
 
     <div class="wrapContainer" [ngClass]="{'justify-between': home.isDesktop}">
@@ -64,9 +64,23 @@
                 </span>
             </div>
 
-            <button type="submit" class="talkBtn"
+            <button type="submit" class="talkBtn" *ngIf="!emailIsSent"
                 [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" #sendMailBtn>Send
-                message :) </button>
+                message :) 
+            </button>
+
+
+
+            <div class="emailConfirmContainer" *ngIf="emailIsSent">
+                <img src="../../assets/images/icons/checkMark.png" alt="">
+                <span>Your email has been sent successfully. I will get in touch as quickly as possible.</span>
+            </div>
         </form>
     </div>
+
+
+
+
+
+    <img class="coloredBgPart" src="../../assets/images/coloredBgParts/Vector 5.png" alt="">
 </section>

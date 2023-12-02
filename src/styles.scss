@@ -3,8 +3,14 @@ $bgColor: rgb(20, 29, 47);
 $mainColor: rgb(75, 71, 255);
 $secondColor: rgb(0, 190, 232);
 
+html{
+    scroll-behavior: smooth;
+}
 
-html, body { height: 100%; }
+html, body {
+    height: 100%; 
+}
+
 body {
     margin: 0; 
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -14,11 +20,11 @@ body {
     overflow-x: hidden;
  }
 
- .d-none{
+.d-none{
     display: none !important;
- }
+}
 
- .wrapActive-40{
+.wrapActive-40{
     width: calc(40%) !important;
 }
 
@@ -28,10 +34,6 @@ body {
 
 .wrapActive-60{
     width: calc(60%) !important;
-}
-
-.padding{
-    padding: 0 10% 0 10%;
 }
 
 .justify-between{
@@ -51,8 +53,37 @@ body {
     gap: 40px !important; 
 }
 
+.font64{
+    font-size: 56px !important;
+}
+
+.font80{
+    font-size: 80px !important;
+}
+
+.font88{
+    font-size: 88px !important;
+}
+
+.textFontDesktop{
+    font-size: 22px !important;
+    line-height: 24px !important;
+}
+
 .desktopHeadlines{
     font-size: 80px !important;
+}
+
+.desktopHeadlines120{
+    font-size: 120px !important;
+}
+
+.desktopHeadlines90{
+    font-size: 90px !important;
+}
+
+.desktopHeadlines60{
+    font-size: 64px !important;
 }
 
 
@@ -75,20 +106,16 @@ body {
     text-align: left !important;
 }
 
-.font64{
-    font-size: 64px !important;
-}
-
-.font90{
-    font-size: 80px !important;
-}
-
-.font120{
-    font-size: 88px !important;
-}
-
 .paddingLeft{
     padding-left: 40px;
+}
+
+.padding{
+    padding: 0 10% 0 10%;
+}
+
+.marginTop10{
+    margin-top: 20vh !important;
 }
 
 

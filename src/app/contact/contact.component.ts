@@ -9,6 +9,8 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+  emailIsSent: boolean = false;
+
 
   public contactForm = new FormGroup(
     {
@@ -27,9 +29,8 @@ export class ContactComponent implements OnInit {
 
 
   ngOnInit(): void {
-    console.log('form', this.contactForm.get('nameField')?.value);
-
   }
+
 
   sendMail() {
     let formData = new FormData();
@@ -38,15 +39,27 @@ export class ContactComponent implements OnInit {
     formData.append('message', this.contactForm.value.messageField || '');
 
     //senden
-    fetch("https://jacob-hengsbach.com/send_mail/send_mail.php",
+/*     fetch("https://jacob-hengsbach.com/send_mail/send_mail.php",
       {
         method: 'POST',
         body: formData
       }
-    )
-
-    console.log('email gesendet after');
+    ) */
+    this.showConfirmation();
+    this.clearInputFields();
   }
 
 
+  clearInputFields() {    
+    this.contactForm.reset();    
+  }
+
+
+  showConfirmation() {
+    this.emailIsSent = true;
+
+    setTimeout(() => {
+      this.emailIsSent = false;
+    }, 6000);
+  }
 }

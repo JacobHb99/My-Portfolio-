@@ -1,8 +1,8 @@
-<section id="aboutMe"  class="aboutMeSection" *ngIf="!home.impressOn">
+<section id="aboutMe"  class="aboutMeSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
     <img *ngIf="home.isDesktop" class="vectorFullsreen" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
 
     <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="aboutMeText">
-        <h2 [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}">About me</h2>
+        <h2 [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopHeadlinesXL': home.isDesktopXl}">About me</h2>
         <span>
             Hi I'm Jacob, passionate frontend developer with a special focus on web applications based on angular.
             With the help of the latest technologies, I support you in turning your idea into a finished, unique product.
@@ -30,8 +30,8 @@
     </div>
 
     <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="personalImageContainer">
-        <img class="imgColorBg" src="../../assets/images/coloredBgParts/Group 2.png" alt="">
-        <img class="personalImg" src="../../assets/images/personal_imgs/hero character photo.png" alt="">
+        <img class="imgColorBg" src="../../assets/images/coloredBgParts/Group 2.png" alt="" [ngClass]="{'personalImgDesktop': home.isDesktop}">
+        <img class="personalImg" src="../../assets/images/personal_imgs/hero character photo.png" alt="" [ngClass]="{'personalImgDesktop': home.isDesktop}"> 
         
         <img *ngIf="home.isMobile" class="vector" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
     </div>
