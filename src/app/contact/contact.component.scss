@@ -201,7 +201,29 @@ $secondColor: rgb(0, 190, 232);
             z-index: 50;
             gap: 24px;
         }
+
+        .scrollUp{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+
+            div{
+                height: 50px;
+                width: 50px;
+                background-image: url('../../assets/images/icons/scrollUp_white.png');
+                background-size: contain;
+                transition: all 0.2s ease-in-out;
+
+
+                &:hover{
+                    background-image: url('../../assets/images/icons/scrollUp_blue.png');
+                    transform: scale(1.1);
+                }
+            }
+        }
     }
+
+
 
     .coloredBgPart{
         position: absolute;
