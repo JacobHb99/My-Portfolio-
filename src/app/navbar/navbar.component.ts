@@ -19,6 +19,10 @@ export class NavbarComponent {
 
   }
 
+
+  /**
+   * Animates the nav-icon after onClick.
+   */
   animmateNavIcon() {
     let $btn = document.getElementById('show');
     let $nav = document.getElementById('nav');;
@@ -27,6 +31,5 @@ export class NavbarComponent {
     $hamburger!.classList.toggle("is-active");
     $nav!.classList.toggle('active');
     this.home.toggleBoolean();
-    console.log(this.home.mobileNavActice);
   }
 }

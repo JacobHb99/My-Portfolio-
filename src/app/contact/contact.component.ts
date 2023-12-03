@@ -1,17 +1,34 @@
 import { Component, ElementRef, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+} from '@angular/animations';
 
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  animations: [
+    trigger('fadeIn', [
+      transition(':enter', [
+        style({opacity: 0}),
+        animate('250ms', style({opacity: 1}))
+      ]),
+      transition(':leave', [
+        style({opacity: 1}),
+        animate('250ms', style({opacity: 0, transform: 'translate(0, -20px)'}))
+      ]),
+    ])
+  ]
 })
 export class ContactComponent implements OnInit {
   emailIsSent: boolean = false;
-
-
   public contactForm = new FormGroup(
     {
       nameField: new FormControl('', [Validators.required, Validators.minLength(2)]),
@@ -32,6 +49,9 @@ export class ContactComponent implements OnInit {
   }
 
 
+ /**
+  * Creates a form group with the input values ​​of the contact form and sends it to the backend.
+  */
   sendMail() {
     let formData = new FormData();
     formData.append('name', this.contactForm.value.nameField || '');
@@ -50,11 +70,17 @@ export class ContactComponent implements OnInit {
   }
 
 
+  /**
+   * Clears the inputfields after submitting.
+   */
   clearInputFields() {    
     this.contactForm.reset();    
   }
 
 
+  /**
+   * Sets the variable that states whether an email has been sent to true for 6 seconds. This will render the confirmation template.
+   */
   showConfirmation() {
     this.emailIsSent = true;
 

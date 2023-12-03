@@ -15,7 +15,7 @@ $secondColor: rgb(0, 190, 232);
     .vectorFullsreen{
         object-fit: cover;
         position: absolute;
-        top: 180vh;
+        top: 175vh;
         width: 100vw;
         height: 60vh;
         max-width: 100%;
@@ -89,6 +89,9 @@ $secondColor: rgb(0, 190, 232);
 }
 
 .personalImgDesktop{
+}
 
+.tabletVector{
+    top: 175vh !important; 
 }
 

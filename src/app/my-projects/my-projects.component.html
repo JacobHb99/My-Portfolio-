@@ -1,23 +1,25 @@
 <section id="projects" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
-    <div class="headlineContainer">
+    <div class="headlineContainer" data-aos="fade-left">
         <div class="blueLineShort"></div>
         <div [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopWidth': home.isDesktop}"
             class="headline">Portfolio</div>
         <div class="blueLineLong" [ngClass]="{'lineWidthDesktop': home.isDesktop}"></div>
     </div>
 
-    <div class="portfolioDescription">
+    <div class="portfolioDescription" data-aos="fade-right">
         This is a sample of my previous projects.
     </div>
 
     <div class="projectsContainer">
+
         <div class="project" *ngFor="let project of projects; let i = index"
-            [ngClass]="{'justify-between': home.isDesktop}">
+            [ngClass]="{'justify-between': home.isDesktop}" data-aos="fade-right">
+
             <div class="projectImgContainer" [ngClass]="{'wrapActive-40': home.isDesktop}">
                 <img src="{{ project.path }}" alt="">
             </div>
 
-            <div class="projectInfosContainer"
+            <div class="projectInfosContainer" 
                 [ngClass]="{'alignItemsStart': home.isDesktop, 'wrapActive-60': home.isDesktop}">
                 <div class="projectName">{{ project.project }}</div>
                 <div class="projectSkill">{{ project.skills }}</div>

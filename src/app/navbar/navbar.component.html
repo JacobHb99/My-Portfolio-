@@ -2,17 +2,17 @@
     <div class="logo">Ja<span class="c">c</span>o<span class="b">b</span></div>
 
     <div *ngIf="home.isDesktop || home.isTablet" class="navbar">
-        <a href="#aboutMe" (click)="home.showContent()">About me</a>
-        <a href="#mySkills" (click)="home.showContent()">Skills</a>
-        <a href="#projects" (click)="home.showContent()">Portfolio</a>
+        <a (click)="home.onClick('aboutMe')" (click)="home.showContent()">About me</a>
+        <a (click)="home.onClick('mySkills')" (click)="home.showContent()">Skills</a>
+        <a (click)="home.onClick('projects')" (click)="home.showContent()">Portfolio</a>
     </div>
 
     <div #$nav id="nav" class="navigation">
         <div class="navigation__inner">
           <!--  Hamburger-Menu-Content   -->
-          <a href="#aboutMe" (click)="this.animmateNavIcon()" (click)="home.showContent()">About me</a>
-          <a href="#mySkills" (click)="this.animmateNavIcon()" (click)="home.showContent()">Skills</a>
-          <a href="#projects" (click)="this.animmateNavIcon()" (click)="home.showContent()">Portfolio</a>
+          <a (click)="home.onClick('aboutMe')" (click)="this.animmateNavIcon()" (click)="home.showContent()">About me</a>
+          <a (click)="home.onClick('mySkills')" (click)="this.animmateNavIcon()" (click)="home.showContent()">Skills</a>
+          <a (click)="home.onClick('projects')" (click)="this.animmateNavIcon()" (click)="home.showContent()">Portfolio</a>
         </div>
     </div>
 

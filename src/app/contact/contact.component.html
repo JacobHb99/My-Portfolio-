@@ -1,11 +1,11 @@
 <section id="contactSection" class="contactSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
     <div class="headlineContainer">
         <div class="coloredLine"></div>
-        <h2 [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}">Contact</h2>
+        <h2 data-aos="fade-up" [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}">Contact</h2>
     </div>
 
     <div class="wrapContainer" [ngClass]="{'justify-between': home.isDesktop}">
-        <div class="haveAProblemContainer" [ngClass]="{'wrapActive-40': home.isDesktop}">
+        <div data-aos="fade-right" class="haveAProblemContainer" [ngClass]="{'wrapActive-40': home.isDesktop}">
             <h3>Got a Problem to solve?</h3>
             <div>
                 Please contact me using this form. I look forward to supporting you in realising your ideas.
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <form (submit)="sendMail()" [formGroup]="contactForm" method="post" class="form" #myForm ngNativeValidate
+        <form data-aos="fade-left" (submit)="sendMail()" [formGroup]="contactForm" method="post" class="form" #myForm ngNativeValidate
             [ngClass]="{'wrapActive-50': home.isDesktop}">
             <div class="nameContainer">
                 <input type="text" formControlName="nameField" id="name" placeholder="Your name"
@@ -64,17 +64,17 @@
                 </span>
             </div>
 
-            <button type="submit" class="talkBtn" *ngIf="!emailIsSent"
+            <button [@fadeIn]="!emailIsSent" type="submit" class="talkBtn" *ngIf="!emailIsSent"
                 [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" #sendMailBtn>Send
                 message :) 
             </button>
 
-            <div class="emailConfirmContainer" *ngIf="emailIsSent">
+            <div [@fadeIn]="emailIsSent" class="emailConfirmContainer" *ngIf="emailIsSent">
                 <img src="../../assets/images/icons/checkMark.png" alt="">
                 <span>Your email has been sent successfully. I will get in touch as quickly as possible.</span>
             </div>
 
-            <a class="scrollUp" href="#startScreenContainer">
+            <a class="scrollUp" (click)="home.onClick('startScreenContainer')">
                 <div></div>
             </a>
         </form>

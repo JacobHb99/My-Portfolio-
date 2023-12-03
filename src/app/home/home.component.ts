@@ -18,35 +18,39 @@ export class HomeComponent implements OnInit {
   isDesktopXl: boolean = false;
   isTablet: boolean = false;
   impressOn: boolean = false;
-
   Breakpoints = Breakpoints;
-  currentBreakpoint:string = '';
+  currentBreakpoint: string = '';
   mobileNavActice: boolean = false;
 
 
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver, private viewportScroller: ViewportScroller) {
 
   }
 
- ngOnInit(): void {
+  public onClick(elementId: string): void { 
+      this.viewportScroller.scrollToAnchor(elementId);
+  }
 
- }
+  ngOnInit(): void {
 
+  }
 
+  /**
+   * Monitors the screen width and sets breakpoints, which are provided by Angular.
+   */
   readonly breakpoint$ = this.breakpointObserver
-    .observe([Breakpoints.Small, Breakpoints.Medium, Breakpoints.Large, Breakpoints.XLarge, Breakpoints.Handset])
+    .observe([Breakpoints.Small, Breakpoints.TabletLandscape, Breakpoints.WebLandscape, Breakpoints.XLarge, Breakpoints.Handset])
     .subscribe(result => {
-
       const breakPoints = result.breakpoints;
 
-      if (breakPoints[Breakpoints.Large]) {
-        this.setLargeBreakpoint();
-      }else if (breakPoints[Breakpoints.XLarge]) {
-        this.setXLargeBreakpoint();
-      } else if (breakPoints[Breakpoints.Medium]) {
-        this.setMediumBreakpoint();
-      }else if (breakPoints[Breakpoints.Small]) {
-        this.setSmallBreakpoint();
+      if (breakPoints[Breakpoints.WebLandscape]) {
+        this.setBreakpoint(true, false, false, true, Breakpoints.WebLandscape);
+      } else if (breakPoints[Breakpoints.XLarge]) {
+        this.setBreakpoint(true, true, false, true, Breakpoints.XLarge);
+      } else if (breakPoints[Breakpoints.TabletLandscape]) {
+        this.setBreakpoint(true, false, false, false, Breakpoints.TabletLandscape);
+      } else if (breakPoints[Breakpoints.Small]) {
+        this.setBreakpoint(false, false, true, false, Breakpoints.Small);
       } else {
         this.hideMobileElements = false;
         this.hideDesktopElements = true;
@@ -55,71 +59,49 @@ export class HomeComponent implements OnInit {
         this.isMobile = true;
         this.isTablet = false;
       }
-      console.log(this.isDesktop);
     })
 
 
-    setLargeBreakpoint() {
-      console.log('Screen matches large-Portrait');
-      this.isDesktop = true;
-      this.isDesktopXl = false;
-      this.isMobile = false;
-      this.isTablet = true;
-      this.currentBreakpoint = Breakpoints.Large;
+    /**
+     * Sets the variables to true or false, depending on the screen width.
+     * @param desktop 
+     * @param desktopXl 
+     * @param mobile 
+     * @param tablet 
+     * @param breakpoint 
+     */
+  setBreakpoint(desktop: boolean, desktopXl: boolean, mobile: boolean, tablet: boolean, breakpoint: any) {
+    this.isDesktop = desktop;
+    this.isDesktopXl = desktopXl;
+    this.isMobile = mobile;
+    this.isTablet = tablet;
+    this.currentBreakpoint = breakpoint;
+    console.log('Screen matches-Portrait', this.currentBreakpoint);
+
+  }
+
+
+  /**
+   * Sets the impressOn-variable to true. This will render the impress template.
+   */
+  showImpress() {
+    this.impressOn = true;
+  }
+
+
+  /**
+   * Sets the impressOn-variable to false. This will hide the impress template.
+   */
+  showContent() {
+    this.impressOn = false;
+  }
+
+
+  toggleBoolean() {
+    if (this.mobileNavActice) {
+      this.mobileNavActice = false;
+    } else {
+      this.mobileNavActice = true;
     }
-
-
-    setXLargeBreakpoint() {
-      console.log('Screen matches XL-Portrait');
-      this.hideDesktopElements = true;
-      this.hideMobileElements = false;
-      this.isDesktop = true;
-      this.isDesktopXl = true;
-      this.isMobile = false;
-      this.isTablet = true;
-      this.currentBreakpoint = Breakpoints.XLarge;
-    }
-
-
-    setMediumBreakpoint() {
-      console.log('Screen matches medium-Portrait');
-
-      this.isDesktop = true;
-      this.isDesktopXl = false;
-      this.isMobile = false;
-      this.isTablet = true;
-      this.currentBreakpoint = Breakpoints.Medium;
-    }
-
-
-    setSmallBreakpoint() {
-      this.hideMobileElements = true;
-      this.hideDesktopElements = false;
-      this.isDesktop = false;
-      this.isDesktopXl = false;
-      this.isMobile = true;
-      this.isTablet = false;
-
-      this.currentBreakpoint = Breakpoints.Small;
-    }
-
-    showImpress() {
-      this.impressOn = true;
-    }
-
-    showContent() {
-      this.impressOn = false;
-    }
-
-
-    toggleBoolean() {
-      if (this.mobileNavActice) {
-        this.mobileNavActice = false;
-      } else {
-        this.mobileNavActice = true;
-      }
-    }
-
-
-    
+  }
 }
