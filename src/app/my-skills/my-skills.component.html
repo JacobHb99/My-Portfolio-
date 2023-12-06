@@ -3,7 +3,7 @@
         
         <div [ngClass]="{'wrapActive-50': home.isDesktop, 'iconsGapDesktop': home.isDesktop}" class="skillsIconsContainer">
             <div [ngClass]="{'iconsDesktop': home.isDesktop}" class="icons">
-                <div class="skillContainer" *ngFor="let skill of skills; let i = index" data-aos="fade-right">
+                <div class="skillContainer" *ngFor="let skill of skills; let i = index" data-aos="fade-up">
                     <img [ngClass]="{'iconsImgDesktop': home.isDesktop || home.isTablet}" src="{{ skill.path }}" alt="">
                     <span>{{ skill.skill }}</span>
                 </div>
@@ -11,24 +11,24 @@
         </div>
 
         <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="skillsTextContainer">
-            <div class="headline" data-aos="fade-left">
-                <div [ngClass]="{'desktopHeadlines': home.isDesktop}" class="skillHeadline">My Skills</div>
+            <div class="headline" data-aos="fade-up">
+                <div [ngClass]="{'desktopHeadlines': home.isDesktop}" class="skillHeadline" translate="">My Skills</div>
                 <div [ngClass]="{'skillsLine': home.isDesktop}" class="greenLine"></div>
             </div>
 
-            <div [ngClass]="{'paddingDesktop25': home.isDesktop}" class="skillsText" data-aos="fade-left">
+            <div [ngClass]="{'paddingDesktop25': home.isDesktop}" class="skillsText" data-aos="fade-up" translate="">
                 I have experience in building projects using many frontend technologies.
                 <br>
                 My priority is to constantly improve these skills, but I am never averse to new concepts.
             </div>
 
             <div (click)="home.onClick('contactSection')" 
-            *ngIf="home.isDesktop" class="getinTouchBtn mr-10" data-aos="fade-left">Get in touch</div>
+            *ngIf="home.isDesktop" class="getinTouchBtn mr-10" data-aos="fade-up">Get in touch</div>
         </div>
     </div>
 
-    <div (click)="home.onClick('contactSection')" *ngIf="home.isMobile" class="getinTouchBtn" data-aos="fade-left">
-        <a>Get in touch</a>
+    <div (click)="home.onClick('contactSection')" *ngIf="home.isMobile" class="getinTouchBtn" data-aos="fade-up">
+        <a translate="">Get in touch</a>
     </div>
 </section>
 

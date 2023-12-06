@@ -49,6 +49,27 @@ $secondColor: rgb(0, 190, 232);
             }
         }
 
+        .languageContainer{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          .seperator{
+            height: 18px;
+            width: 2px;
+            background-color: $secondColor;
+            border-radius: 1px;
+          }
+
+          .en{
+            cursor: pointer;
+          }
+
+          .de{
+            cursor: pointer;
+          }
+        }
     }
 
 
@@ -147,6 +168,30 @@ $secondColor: rgb(0, 190, 232);
           font-weight: 400;
           color: white;
         }
+
+        .languageContainer{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          font-size: 24px;
+          margin-top: 10vh;
+
+          .seperator{
+            height: 18px;
+            width: 2px;
+            background-color: $secondColor;
+            border-radius: 1px;
+          }
+
+          .en{
+            cursor: pointer;
+          }
+
+          .de{
+            cursor: pointer;
+          }
+        }
       }
       
       @keyframes elastic {
@@ -232,4 +277,8 @@ $secondColor: rgb(0, 190, 232);
   }
   
  
+}
+
+.activeLang{
+  color: $secondColor !important;
 }

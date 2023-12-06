@@ -122,6 +122,7 @@ $secondColor: rgb(0, 190, 232);
             
                 textarea{
                     height: 162px !important;
+                    padding: 6px 6px 6px 6px !important;
                     resize: none;
                 }
             }
@@ -178,10 +179,12 @@ $secondColor: rgb(0, 190, 232);
             z-index: 80;
             margin-top: 37px;
             transition: all 0.2s ease-in-out;
-            cursor: pointer;
+            color: white;
+            border: none;
 
     
-            &:hover{
+            &:hover:enabled{
+                cursor: pointer;
                 transform: scale(1.1);
                 background-color: $mainColor;
             }
@@ -213,7 +216,7 @@ $secondColor: rgb(0, 190, 232);
                 background-image: url('../../assets/images/icons/scrollUp_white.png');
                 background-size: contain;
                 transition: all 0.2s ease-in-out;
-
+                cursor: pointer;
 
                 &:hover{
                     background-image: url('../../assets/images/icons/scrollUp_blue.png');

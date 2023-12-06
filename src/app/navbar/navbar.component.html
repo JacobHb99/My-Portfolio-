@@ -2,17 +2,33 @@
     <div class="logo">Ja<span class="c">c</span>o<span class="b">b</span></div>
 
     <div *ngIf="home.isDesktop || home.isTablet" class="navbar">
-        <a (click)="home.onClick('aboutMe')" (click)="home.showContent()">About me</a>
-        <a (click)="home.onClick('mySkills')" (click)="home.showContent()">Skills</a>
-        <a (click)="home.onClick('projects')" (click)="home.showContent()">Portfolio</a>
+        <a (click)="home.onClick('aboutMe')" translate="">About me</a>
+        <a (click)="home.onClick('mySkills')">Skills</a>
+        <a (click)="home.onClick('projects')">Portfolio</a>
+
+        <div class="languageContainer">
+            <span class="en" [ngClass]="{'activeLang': home.defaultLanguage}"
+            (click)="home.changeLanguage('en')">EN</span>
+            <span class="seperator"></span>
+            <span class="de" [ngClass]="{'activeLang': !home.defaultLanguage}"
+            (click)="home.changeLanguage('de')">DE</span>
+        </div>
     </div>
 
     <div #$nav id="nav" class="navigation">
         <div class="navigation__inner">
           <!--  Hamburger-Menu-Content   -->
-          <a (click)="home.onClick('aboutMe')" (click)="this.animmateNavIcon()" (click)="home.showContent()">About me</a>
-          <a (click)="home.onClick('mySkills')" (click)="this.animmateNavIcon()" (click)="home.showContent()">Skills</a>
-          <a (click)="home.onClick('projects')" (click)="this.animmateNavIcon()" (click)="home.showContent()">Portfolio</a>
+          <a (click)="home.onClick('aboutMe')" (click)="this.animmateNavIcon()" translate="">About me</a>
+          <a (click)="home.onClick('mySkills')" (click)="this.animmateNavIcon()">Skills</a>
+          <a (click)="home.onClick('projects')" (click)="this.animmateNavIcon()">Portfolio</a>
+
+          <div class="languageContainer">
+            <span class="en" [ngClass]="{'activeLang': home.defaultLanguage}"
+            (click)="home.changeLanguage('en')">EN</span>
+            <span class="seperator"></span>
+            <span class="de" [ngClass]="{'activeLang': !home.defaultLanguage}"
+            (click)="home.changeLanguage('de')">DE</span>
+          </div>
         </div>
     </div>
 

@@ -32,7 +32,7 @@ export class ContactComponent implements OnInit {
   public contactForm = new FormGroup(
     {
       nameField: new FormControl('', [Validators.required, Validators.minLength(2)]),
-      emailField: new FormControl('', [Validators.required, Validators.email]),
+      emailField: new FormControl('', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
       messageField: new FormControl('', [Validators.required, Validators.minLength(10)]),
       checkBox: new FormControl(false, [Validators.requiredTrue])
     }
@@ -41,7 +41,6 @@ export class ContactComponent implements OnInit {
 
   constructor(public home: HomeComponent) {
     this.contactForm.valueChanges.subscribe(console.log);
-
   }
 
 
@@ -59,12 +58,12 @@ export class ContactComponent implements OnInit {
     formData.append('message', this.contactForm.value.messageField || '');
 
     //senden
-/*     fetch("https://jacob-hengsbach.com/send_mail/send_mail.php",
+    fetch("https://jacob-hengsbach.com/send_mail/send_mail.php",
       {
         method: 'POST',
         body: formData
       }
-    ) */
+    )
     this.showConfirmation();
     this.clearInputFields();
   }

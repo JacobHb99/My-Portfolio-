@@ -1,21 +1,21 @@
-<section id="contactSection" class="contactSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
-    <div class="headlineContainer">
+<section id="contactSection" class="contactSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}" >
+    <div class="headlineContainer" data-aos="fade-up">
         <div class="coloredLine"></div>
-        <h2 data-aos="fade-up" [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}">Contact</h2>
+        <h2 [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}" translate="">Contact</h2>
     </div>
 
     <div class="wrapContainer" [ngClass]="{'justify-between': home.isDesktop}">
-        <div data-aos="fade-right" class="haveAProblemContainer" [ngClass]="{'wrapActive-40': home.isDesktop}">
-            <h3>Got a Problem to solve?</h3>
-            <div>
-                Please contact me using this form. I look forward to supporting you in realising your ideas.
+        <div data-aos="fade-up" class="haveAProblemContainer" [ngClass]="{'wrapActive-40': home.isDesktop}">
+            <h3 translate="">Got a Problem to solve?</h3>
+            <div translate="">
+                So, if you have an idea and want someone to have a look at it? Get in touch or something.
                 <br>
                 <br>
-                Need a Frontenddeceloper? <b>Contact me!</b>
+                Need a Frontenddeveloper? <b translate="">Contact me!</b>
             </div>
         </div>
 
-        <form data-aos="fade-left" (submit)="sendMail()" [formGroup]="contactForm" method="post" class="form" #myForm ngNativeValidate
+        <form data-aos="fade-up" (submit)="sendMail()" [formGroup]="contactForm" method="post" class="form" #myForm ngNativeValidate
             [ngClass]="{'wrapActive-50': home.isDesktop}">
             <div class="nameContainer">
                 <input type="text" formControlName="nameField" id="name" placeholder="Your name"
@@ -23,10 +23,8 @@
                 <ng-container class="errorContainer"
                     *ngIf="((contactForm.controls['nameField'].dirty || contactForm.controls['nameField'].touched) && !contactForm.controls['nameField'].valid)">
                     <div class="errorContainer">
-                        <p *ngIf="(contactForm.controls['nameField'].errors?.['required'])">Bitte geben sie ihren Namen
-                            an.</p>
-                        <p *ngIf="(contactForm.controls['nameField'].errors?.['minlength'])">Der Name sollte min. aus 2
-                            Zeichen bestehen.</p>
+                        <p *ngIf="(contactForm.controls['nameField'].errors?.['required'])" translate="">Enter your name.</p>
+                        <p *ngIf="(contactForm.controls['nameField'].errors?.['minlength'])" translate="">At least 2 letters required.</p>
                     </div>
                 </ng-container>
             </div>
@@ -37,7 +35,7 @@
                 <ng-container class="errorContainer"
                     *ngIf="((contactForm.controls['emailField'].dirty || contactForm.controls['emailField'].touched) && !contactForm.controls['emailField'].valid)">
                     <div class="errorContainer">
-                        <p>Bitte geben sie ihre e-mail an.</p>
+                        <p translate="">Enter your message</p>
                     </div>
                 </ng-container>
             </div>
@@ -48,30 +46,28 @@
                 <ng-container
                     *ngIf="((contactForm.controls['messageField'].dirty || contactForm.controls['messageField'].touched) && !contactForm.controls['messageField'].valid)">
                     <div class="errorContainer">
-                        <p *ngIf="(contactForm.controls['messageField'].errors?.['required'])">Bitte beschreibe kurz
-                            dein Anliegen.</p>
-                        <p *ngIf="(contactForm.controls['messageField'].errors?.['minlength'])">Bitte erzähle ein wenig
-                            ausführlicher.</p>
+                        <p *ngIf="(contactForm.controls['messageField'].errors?.['required'])" translate="">Please describe your issue.</p>
+                        <p *ngIf="(contactForm.controls['messageField'].errors?.['minlength'])" translate="">Tell me a bit more.</p>
                     </div>
                 </ng-container>
             </div>
 
             <div class="privatePolicyCheckContainer">
                 <input type="checkbox" formControlName="checkBox" class="checkBox">
-                <span>I have read the
+                <span translate="">I have read the
                     <span (click)="home.showImpress()">private policy</span>
                     and aggree to the processing of my data as outlined.
                 </span>
             </div>
 
             <button [@fadeIn]="!emailIsSent" type="submit" class="talkBtn" *ngIf="!emailIsSent"
-                [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" #sendMailBtn>Send
-                message :) 
+                [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" #sendMailBtn translate="">Send
+                message
             </button>
 
             <div [@fadeIn]="emailIsSent" class="emailConfirmContainer" *ngIf="emailIsSent">
                 <img src="../../assets/images/icons/checkMark.png" alt="">
-                <span>Your email has been sent successfully. I will get in touch as quickly as possible.</span>
+                <span translate="">Your email has been sent successfully. I will get in touch as quickly as possible.</span>
             </div>
 
             <a class="scrollUp" (click)="home.onClick('startScreenContainer')">

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ViewportScroller } from '@angular/common';
+import {TranslateService} from '@ngx-translate/core';
+
 
 
 @Component({
@@ -11,8 +13,6 @@ import { ViewportScroller } from '@angular/common';
 
 
 export class HomeComponent implements OnInit {
-  hideMobileElements!: boolean;
-  hideDesktopElements!: boolean;
   isMobile: boolean = false;
   isDesktop: boolean = false;
   isDesktopXl: boolean = false;
@@ -21,14 +21,19 @@ export class HomeComponent implements OnInit {
   Breakpoints = Breakpoints;
   currentBreakpoint: string = '';
   mobileNavActice: boolean = false;
+  defaultLanguage: boolean = true;
 
 
-  constructor(private breakpointObserver: BreakpointObserver, private viewportScroller: ViewportScroller) {
+  constructor(private breakpointObserver: BreakpointObserver, private viewportScroller: ViewportScroller, public translate: TranslateService) {
 
   }
 
   public onClick(elementId: string): void { 
+    this.showContent();
+
+    setTimeout(() => {
       this.viewportScroller.scrollToAnchor(elementId);
+    }, 100);
   }
 
   ngOnInit(): void {
@@ -52,8 +57,6 @@ export class HomeComponent implements OnInit {
       } else if (breakPoints[Breakpoints.Small]) {
         this.setBreakpoint(false, false, true, false, Breakpoints.Small);
       } else {
-        this.hideMobileElements = false;
-        this.hideDesktopElements = true;
         this.isDesktop = false;
         this.isDesktopXl = false;
         this.isMobile = true;
@@ -103,5 +106,15 @@ export class HomeComponent implements OnInit {
     } else {
       this.mobileNavActice = true;
     }
+  }
+
+
+  /**
+   * Changes the displayed language.
+   * @param clickedLanguage {string} - 'en' or 'de': defines which language should be displayed.
+   */
+  changeLanguage(clickedLanguage: string) {
+    this.translate.use(clickedLanguage);
+    this.defaultLanguage = !this.defaultLanguage;
   }
 }
