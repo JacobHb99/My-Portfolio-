@@ -1,7 +1,9 @@
 <section id="startScreenContainer" class="startScreenContainer" *ngIf="!home.impressOn">
     <div class="coloredParts">
-        <img class="blueColorSpot" src="../../assets/images/coloredBgParts/Purple shadow (2).png" alt="">
-        <img class="greenColorSpot" src="../../assets/images/coloredBgParts/Purple shadow (1).png" alt="">
+        <img class="blueColorSpot" [ngClass]="{'blueColorMobile': home.isMobile}"
+        src="../../assets/images/coloredBgParts/Purple shadow (2).png" alt="">
+        <img class="greenColorSpot" 
+        src="../../assets/images/coloredBgParts/Purple shadow (1).png" alt="">
     </div>
  
     <div class="aboveTheFold">
@@ -14,7 +16,7 @@
     </div>
 
     <div class="talkBtn" (click)="home.onClick('contactSection')">
-        <a>Let's talk!</a>
+        <a [ngClass]="{'font20': home.isDesktopXl}">Let's talk!</a>
     </div>
 
     <div class="socialMediaContainer">

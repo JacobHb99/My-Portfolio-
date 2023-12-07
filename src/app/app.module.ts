@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +18,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import {TranslateService} from '@ngx-translate/core';
+import { RouterTestingModule } from '@angular/router/testing';
 
 
 
@@ -38,7 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FooterComponent,
     HomeComponent,
     ContactComponent,
-    LegalNoticeComponent
+    LegalNoticeComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +48,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule.forRoot([]),
+    RouterTestingModule,
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {

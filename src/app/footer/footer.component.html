@@ -1,6 +1,11 @@
 <section class="footerSection">
     <div class="footerContent" [ngClass]="{'directionRow': home.isDesktop ,'justify-between': home.isDesktop}">
-        <div class="logo">Ja<span class="c">c</span>o<span class="b">b</span></div>
+        
+        <a href="https://jacob-hengsbach.com" (click)="home.showContent('startScreenContainer')" class="logo">
+            Ja<span class="c">c</span>o<span class="b">b</span>
+        </a>
+
+        
 
         <div class="copyRightContainer">© Jacob Hengsbach 2023</div>
 

@@ -31,20 +31,18 @@ $secondColor: rgb(0, 190, 232);
 
         .blueColorSpot{
             position: absolute;
-            width: 420px;
-            height: 590px;
-            top: 200px;
-            left: -185px;
-            
+            height: 60%;
+            top: 230px;
+            left: -255px;
+            object-fit: contain;
         }
 
         .greenColorSpot{
             position: absolute;
-            width: 475px;
-            height: 490px;
+            height: 50%;
             top: 290px;
-            right: -275px;
-            
+            right: -285px;
+            object-fit: contain;
         }
     }
 
@@ -168,6 +166,12 @@ $secondColor: rgb(0, 190, 232);
             font-size: 30px !important;
         }
     }
+}
+
+.blueColorMobile{
+    height: 50% !important;
+    top: 230px;
+    left: -255px;
 }
 
 

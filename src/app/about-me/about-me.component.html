@@ -1,7 +1,6 @@
-<section id="aboutMe"  class="aboutMeSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
-    <img *ngIf="home.isDesktop" [ngClass]="{'tabletVector': home.isTablet}" class="vectorFullsreen" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
+<section id="aboutMe"  class="aboutMeSection" *ngIf="!home.impressOn" [ngClass]="{'font20': home.isDesktopXl}">
 
-    <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="aboutMeText">
+    <div [ngClass]="{'wrapActive-40': home.isDesktop, 'mobileText': home.isMobile}" class="aboutMeText">
         <h2 data-aos="fade-up" [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopHeadlinesXL': home.isDesktopXl}" translate="">About me</h2>
         <span data-aos="fade-up" translate="">
             Hi I'm Jacob, motivated frontend developer with a special focus on web applications based on angular.
@@ -30,10 +29,13 @@
     </div>
 
     <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="personalImageContainer">
-        <img class="imgColorBg" src="../../assets/images/coloredBgParts/Group 2.png" alt="" [ngClass]="{'personalImgDesktop': home.isDesktop}">
-        <img class="personalImg" src="../../assets/images/personal_imgs/hero character photo.png" alt="" [ngClass]="{'personalImgDesktop': home.isDesktop}"> 
+        <img class="imgColorBg" src="../../assets/images/coloredBgParts/Group 2.png" alt="" [ngClass]="{'personalImgMobile': home.isMobile}">
+        <img class="personalImg" src="../../assets/images/personal_imgs/hero character photo.png" alt="" [ngClass]="{'personalImgMobile': home.isMobile}"> 
         
         <img *ngIf="home.isMobile" class="vector" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
     </div>
 
+    <div class="vectorContainer">
+        <img *ngIf="home.isDesktop" [ngClass]="{'tabletVector': home.isTablet}" class="vectorFullsreen" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
+    </div>
 </section>

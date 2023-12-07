@@ -6,7 +6,7 @@
         <div class="blueLineLong" [ngClass]="{'lineWidthDesktop': home.isDesktop}"></div>
     </div>
 
-    <div class="portfolioDescription" data-aos="fade-up" translate="">
+    <div class="portfolioDescription" data-aos="fade-up" translate="" [ngClass]="{'font20': home.isDesktopXl}">
         This is a sample of my previous projects.
     </div>
 
@@ -23,7 +23,8 @@
                 [ngClass]="{'alignItemsStart': home.isDesktop, 'wrapActive-60': home.isDesktop}">
                 <div class="projectName">{{ project.project }}</div>
                 <div class="projectSkill">{{ project.skills }}</div>
-                <div [ngClass]="{'text-align-left': home.isDesktop}" class="projectInfo" translate="">{{ project.info | translate }}</div>
+                <div [ngClass]="{'text-align-left': home.isDesktop}" class="projectInfo" translate=""
+                 [ngClass]="{'font20': home.isDesktopXl}">{{ project.info | translate }}</div>
 
                 <div class="btnContainer">
                     <a href="{{ project.liveTestPath }}" target="_blank" rel="noopener noreferrer" *ngIf="project.liveTestPath">

@@ -30,6 +30,9 @@ $secondColor: rgb(0, 190, 232);
         .logo{
             font-size: 45px;
             font-weight: 800;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
     
             .c{
               color: $mainColor;

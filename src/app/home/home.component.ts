@@ -28,14 +28,6 @@ export class HomeComponent implements OnInit {
 
   }
 
-  public onClick(elementId: string): void { 
-    this.showContent();
-
-    setTimeout(() => {
-      this.viewportScroller.scrollToAnchor(elementId);
-    }, 100);
-  }
-
   ngOnInit(): void {
 
   }
@@ -44,19 +36,19 @@ export class HomeComponent implements OnInit {
    * Monitors the screen width and sets breakpoints, which are provided by Angular.
    */
   readonly breakpoint$ = this.breakpointObserver
-    .observe([Breakpoints.Small, Breakpoints.TabletLandscape, Breakpoints.WebLandscape, Breakpoints.XLarge, Breakpoints.Handset])
+    .observe([Breakpoints.Small, Breakpoints.TabletLandscape, Breakpoints.XLarge, Breakpoints.WebLandscape, Breakpoints.Handset])
     .subscribe(result => {
       const breakPoints = result.breakpoints;
 
-      if (breakPoints[Breakpoints.WebLandscape]) {
-        this.setBreakpoint(true, false, false, true, Breakpoints.WebLandscape);
-      } else if (breakPoints[Breakpoints.XLarge]) {
-        this.setBreakpoint(true, true, false, true, Breakpoints.XLarge);
-      } else if (breakPoints[Breakpoints.TabletLandscape]) {
-        this.setBreakpoint(true, false, false, false, Breakpoints.TabletLandscape);
-      } else if (breakPoints[Breakpoints.Small]) {
+       if (breakPoints[Breakpoints.Small]) {
         this.setBreakpoint(false, false, true, false, Breakpoints.Small);
-      } else {
+      }else if (breakPoints[Breakpoints.XLarge]) {
+        this.setBreakpoint(true, true, false, true, Breakpoints.XLarge);
+      } else if (breakPoints[Breakpoints.WebLandscape]) {
+        this.setBreakpoint(true, false, false, true, Breakpoints.WebLandscape);
+      }  else if (breakPoints[Breakpoints.TabletLandscape]) {
+        this.setBreakpoint(true, false, false, false, Breakpoints.TabletLandscape);
+      }  else {
         this.isDesktop = false;
         this.isDesktopXl = false;
         this.isMobile = true;
@@ -79,8 +71,14 @@ export class HomeComponent implements OnInit {
     this.isMobile = mobile;
     this.isTablet = tablet;
     this.currentBreakpoint = breakpoint;
-    console.log('Screen matches-Portrait', this.currentBreakpoint);
+      console.log(this.isDesktopXl);
 
+
+  }
+
+
+  public onClick(elementId: string): void { 
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 
 
@@ -89,23 +87,27 @@ export class HomeComponent implements OnInit {
    */
   showImpress() {
     this.impressOn = true;
+
+    setTimeout(() => {
+      this.onClick('impress');
+    }, 100);
   }
 
 
   /**
    * Sets the impressOn-variable to false. This will hide the impress template.
    */
-  showContent() {
+  showContent(elementId: string) {
     this.impressOn = false;
+
+    setTimeout(() => {
+      this.onClick(elementId);
+    }, 100);
   }
 
 
   toggleBoolean() {
-    if (this.mobileNavActice) {
-      this.mobileNavActice = false;
-    } else {
-      this.mobileNavActice = true;
-    }
+    this.mobileNavActice = !this.mobileNavActice;
   }
 
 

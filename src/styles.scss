@@ -53,6 +53,11 @@ body {
     gap: 40px !important; 
 }
 
+.font20{
+    font-size: 24px !important;
+    line-height: 26px !important;
+}
+
 .font64{
     font-size: 56px !important;
 }
@@ -117,6 +122,31 @@ body {
 .marginTop10{
     margin-top: 20vh !important;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $secondColor;
+    border-radius: 2px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $mainColor;
+    border-radius: 2px;
+
+  }
+  
 
 
 

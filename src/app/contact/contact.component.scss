@@ -71,11 +71,10 @@ $secondColor: rgb(0, 190, 232);
             z-index: 35;
 
             .nameContainer, .emailContainer, .messageContainer {
-                width: calc(100% - 12px);
+                width: calc(100% - 32px);
                 height: 80px;
                 display: flex;
                 flex-direction: column;
-                justify-content: startflex-;
                 align-items: flex-start;
 
 
@@ -90,13 +89,13 @@ $secondColor: rgb(0, 190, 232);
 
 
                 input, textarea{
-                    width: calc(100% - 12px);
+                    width: calc(100% - 32px);
                     border: 2px solid $mainColor;
                     background-color: transparent;
                     border-radius: 16px;
                     color: white;
                     font-family: Roboto;
-                    padding: 0px 6px;
+                    padding: 0px 16px;
                     font-size: 16px;
                     outline: none;
                     cursor: text;
@@ -122,7 +121,7 @@ $secondColor: rgb(0, 190, 232);
             
                 textarea{
                     height: 162px !important;
-                    padding: 6px 6px 6px 6px !important;
+                    padding: 16px !important;
                     resize: none;
                 }
             }
@@ -134,13 +133,12 @@ $secondColor: rgb(0, 190, 232);
             
 
             .privatePolicyCheckContainer{
-                width: 100%;
-                max-width: 600px;
+                width: calc(100% - 32px);
                 display: flex;
                 justify-content: flex-start;
                 align-items: flex-start;
                 gap: 10px;
-                margin-top: -21px;
+                margin-top: -6px;
                 font-size: 14px;
 
                 .checkBox{
@@ -243,13 +241,10 @@ $secondColor: rgb(0, 190, 232);
 }
 
 .inputDesktop{
-    width: calc(100% - 12px) !important;
-    max-width: 617px !important;
     height: 50px !important;
 }
 
 .textAreaSDesktop{
-    max-width: 617px !important;
     height: 202px !important;
 }
 
