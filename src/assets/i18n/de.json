@@ -1,11 +1,9 @@
 {
 	"About me": "Über mich",
-	"Hi I'm Jacob, motivated frontend developer with a special focus on web applications based on angular. With the help of the latest technologies, I support you in turning your idea into a finished, unique product.": "Hi ich bin Jacob, motivierter Frontend-Entwickler mit Schwerpunkt auf Webaplikationen basierend auf Angular. Mit den modernsten Technologien helfe ich dir, deine Idee zum einzigartigen Produkt zu entwickeln.",
-	"On my never-ending self-development in the \"tec-world\", I attach particular importance to a humane approach and an honest commitment to the customer.": "Während meiner nicht endenden Weiterentwicklung in der \"Tech-Welt\", lege ich besonderen Wert auf einen respektvollen Umgang und ein ehrliches Engagement für den Kunden.",
-	"I belive that every problem should be met with a positive attitude - writing award-winning code does not happen from a \"this can't be done\" attitude.": "Ich bin davon überzeugt, dass man jedes Problem mit einer positiven Einstellung angehen sollte - preisgekrönter Code entsteht nicht durch eine \"das ist unmöglich\" Negativität.",
-	"I am always ready for a new challenge where I can grow as a human and expand my skill stack.": "Ich bin immer bereit für eine neue Herausforderung an der ich als mensch wachsen kann.",
-	"The beauty of this industry is that it is full of talented and creative people.": "Das schöne an dieser Branche ist, dass sie voll von talentierten und kreativen Menschen ist.",
-	"I learn something new every day either by my own curiosity or by like-minded code enthusiasts.": "Durch den offen Austausch lernt man täglich etwas Neues von einem Gleichgesinnten.",
+	"Hi I'm Jacob, Frontend Developer based in Miltenberg, Germany. Experienced in developing web apps with Javascript and Angular.": "Hallo, ich bin Jacob, Frontend-Entwickler aus Miltenberg, Deutschland. Ich habe Erfahrung in der Entwicklung von Web-Apps mit Javascript und Angular.",
+	"I am passionate about providing solutions for users by building accessible products, always keeping an eye on clean code principles.": "Meine Leidenschaft ist es, Lösungen für die Benutzer zu entwickeln, indem ich zugängliche Produkte herstelle und dabei immer die clean-code Prinzipien im Auge behalte.",
+	"My goal is to bring ideas to life with code and to continuously expand my knowledge.": "Mein Ziel ist es, Ideen mit Code zum Leben zu erwecken und mein Wissen ständig zu erweitern.",
+	"I'm quietly confident, naturally curious, and perpetually working on improving my chops.": "Ich bin kommunikativ, von Natur aus neugierig und arbeite ständig daran, meine Fähigkeiten zu verbessern.",
 	"Contact": "Kontakt",
 	"Got a Problem to solve?": "Brauchst du Hilfe?",
 	"So, if you have an idea and want someone to have a look at it? Get in touch or something.": "Du hast eine Idee und willst das mal jemand drüber schaut?",
@@ -24,6 +22,5 @@
 	"This is a sample of my previous projects.": "Das ist eine Probe meiner letzten Projekte.",
 	"My Skills": "Skills",
 	"I have experience in building projects using many frontend technologies.": "Ich habe Erfahrung in der Anwendung von vielen Frontend-Technologien.",
-	"My priority is to constantly improve these skills, but I am never averse to new concepts.": "Mir ist es wichtig meine bereit erlernten Fähigkeiten stetig zu verbessern, allerdings bin ich zu neuen Konzepten nie abgeneigt.",
 	"Get in touch": "Kontaktieren"
 }

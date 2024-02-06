@@ -1,4 +1,4 @@
-<section id="mySkills" class="skillsSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
+<section id="mySkills" class="skillsSection" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
     <div class="skillsContainer" [ngClass]="{'justify-center': home.isMobile}">
         
         <div [ngClass]="{'wrapActive-50': home.isDesktop, 'iconsGapDesktop': home.isDesktop}" class="skillsIconsContainer">
@@ -18,8 +18,6 @@
 
             <div [ngClass]="{'paddingDesktop25': home.isDesktop}" class="skillsText" data-aos="fade-up" translate="" [ngClass]="{'font20': home.isDesktopXl}">
                 I have experience in building projects using many frontend technologies.
-                <br>
-                My priority is to constantly improve these skills, but I am never averse to new concepts.
             </div>
 
             <div (click)="home.onClick('contactSection')" 
@@ -28,7 +26,7 @@
     </div>
 
     <div (click)="home.onClick('contactSection')" *ngIf="home.isMobile" class="getinTouchBtn" data-aos="fade-up">
-        <a translate="">Get in touch</a>
+        <a translate="" [ngClass]="{'font20': home.isDesktopXl}">Get in touch</a>
     </div>
 </section>
 

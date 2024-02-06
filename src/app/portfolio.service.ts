@@ -6,5 +6,5 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PortfolioService {
 
-  constructor() { }
+  constructor(public http: HttpClient) { }
 }

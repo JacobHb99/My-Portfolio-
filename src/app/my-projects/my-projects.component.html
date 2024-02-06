@@ -1,4 +1,4 @@
-<section id="projects" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
+<section id="projects" [ngClass]="{'textFontDesktop': home.isDesktopXl}">
     <div class="headlineContainer" data-aos="fade-up">
         <div class="blueLineShort"></div>
         <div [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopWidth': home.isDesktop}"
@@ -28,10 +28,10 @@
 
                 <div class="btnContainer">
                     <a href="{{ project.liveTestPath }}" target="_blank" rel="noopener noreferrer" *ngIf="project.liveTestPath">
-                        <div class="liveBtn btn">Live test</div>
+                        <div class="liveBtn btn" [ngClass]="{'font20': home.isDesktopXl}">Live test</div>
                     </a>
                     <a href="{{ project.gitPath }}" target="_blank" rel="noopener noreferrer">
-                        <div class="gitBtn btn">Git Hub</div>
+                        <div class="gitBtn btn" [ngClass]="{'font20': home.isDesktopXl}">Git Hub</div>
                     </a>
                 </div>
             </div>

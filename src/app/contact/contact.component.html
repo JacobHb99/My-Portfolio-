@@ -1,4 +1,4 @@
-<section id="contactSection" class="contactSection" *ngIf="!home.impressOn" [ngClass]="{'textFontDesktop': home.isDesktopXl}" >
+<section id="contactSection" class="contactSection" [ngClass]="{'textFontDesktop': home.isDesktopXl}" >
     <div class="headlineContainer" data-aos="fade-up">
         <div class="coloredLine"></div>
         <h2 [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet}" translate="">Contact</h2>
@@ -20,7 +20,7 @@
             <div class="nameContainer">
                 <input type="text" formControlName="nameField" id="name" placeholder="Your name"
                     [ngClass]="{'inputDesktop': home.isDesktop}">
-                <ng-container class="errorContainer"
+                <ng-container class="errorContainer" 
                     *ngIf="((contactForm.controls['nameField'].dirty || contactForm.controls['nameField'].touched) && !contactForm.controls['nameField'].valid)">
                     <div class="errorContainer">
                         <p *ngIf="(contactForm.controls['nameField'].errors?.['required'])" translate="">Enter your name.</p>
@@ -35,7 +35,7 @@
                 <ng-container class="errorContainer"
                     *ngIf="((contactForm.controls['emailField'].dirty || contactForm.controls['emailField'].touched) && !contactForm.controls['emailField'].valid)">
                     <div class="errorContainer">
-                        <p translate="">Enter your message</p>
+                        <p translate="">Enter your email</p>
                     </div>
                 </ng-container>
             </div>
@@ -60,9 +60,9 @@
                 </span>
             </div>
 
-            <button [@fadeIn]="!emailIsSent" type="submit" class="talkBtn" *ngIf="!emailIsSent"
-                [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" #sendMailBtn translate="">Send
-                message
+            <button [@fadeIn]="!emailIsSent" type="submit" class="talkBtn" *ngIf="!emailIsSent" [ngClass]="{'font20': home.isDesktopXl}"
+                [disabled]="!(contactForm.valid && (contactForm.dirty || contactForm.touched))" #sendMailBtn translate="">
+                Send message
             </button>
 
             <div [@fadeIn]="emailIsSent" class="emailConfirmContainer" *ngIf="emailIsSent">
@@ -75,12 +75,6 @@
             </a>
         </form>
     </div>
-
-    
-
-    
-
-
 
     <img class="coloredBgPart" src="../../assets/images/coloredBgParts/Vector 5.png" alt="">
 </section>

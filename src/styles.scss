@@ -91,6 +91,10 @@ body {
     font-size: 64px !important;
 }
 
+.align-left{
+    text-align: left !important;
+}
+
 
 .btn{
     padding: 15px 30px;
@@ -126,18 +130,21 @@ body {
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
-    border-radius: 4px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: white;
+    background: $bgColor;
+    border: 2px solid $secondColor;
+    border-radius: 5px;
+
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: $secondColor;
-    border-radius: 2px;
+    border-radius: 5px;
+    height: 5px;
   }
   
   /* Handle on hover */

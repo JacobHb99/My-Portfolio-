@@ -1,11 +1,9 @@
 {
 	"About me": "About me",
-	"Hi I'm Jacob, motivated frontend developer with a special focus on web applications based on angular. With the help of the latest technologies, I support you in turning your idea into a finished, unique product.": "Hi I'm Jacob, motivated frontend developer with a special focus on web applications based on angular. With the help of the latest technologies, I support you in turning your idea into a finished, unique product.",
-	"On my never-ending self-development in the \"tec-world\", I attach particular importance to a humane approach and an honest commitment to the customer.": "On my never-ending self-development in the \"tec-world\", I attach particular importance to a humane approach and an honest commitment to the customer.",
-	"I belive that every problem should be met with a positive attitude - writing award-winning code does not happen from a \"this can't be done\" attitude.": "I belive that every problem should be met with a positive attitude - writing award-winning code does not happen from a \"this can't be done\" attitude.",
-	"I am always ready for a new challenge where I can grow as a human and expand my skill stack.": "I am always ready for a new challenge where I can grow as a human and expand my skill stack.",
-	"The beauty of this industry is that it is full of talented and creative people.": "The beauty of this industry is that it is full of talented and creative people.",
-	"I learn something new every day either by my own curiosity or by like-minded code enthusiasts.": "I learn something new every day either by my own curiosity or by like-minded code enthusiasts.",
+	"Hi I'm Jacob, Frontend Developer based in Miltenberg, Germany. Experienced in developing web apps with Javascript and Angular.": "Hi I'm Jacob, Frontend Developer based in Miltenberg, Germany. Experienced in developing web apps with Javascript and Angular.",
+	"I am passionate about providing solutions for users by building accessible products, always keeping an eye on clean code principles.": "I am passionate about providing solutions for users by building accessible products, always keeping an eye on clean code principles.",
+	"My goal is to bring ideas to life with code and to continuously expand my knowledge.": "My goal is to bring ideas to life with code and to continuously expand my knowledge.",
+	"I'm quietly confident, naturally curious, and perpetually working on improving my chops.": "I'm quietly confident, naturally curious, and perpetually working on improving my chops.",
 	"Contact": "Contact",
 	"Got a Problem to solve?": "Got a Problem to solve?",
 	"So, if you have an idea and want someone to have a look at it? Get in touch or something.": "So, if you have an idea and want someone to have a look at it? Get in touch or something.",
@@ -24,7 +22,6 @@
 	"This is a sample of my previous projects.": "This is a sample of my previous projects.",
 	"My Skills": "My Skills",
 	"I have experience in building projects using many frontend technologies.": "I have experience in building projects using many frontend technologies.",
-	"My priority is to constantly improve these skills, but I am never averse to new concepts.": "My priority is to constantly improve these skills, but I am never averse to new concepts.",
 	"Get in touch": "Get in touch",
 	"So, if you have an idea and want someone to have a look at it? Get in touch or something": "So, if you have an idea and want someone to have a look at it? Get in touch or something"
 }

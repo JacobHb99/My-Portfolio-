@@ -79,7 +79,7 @@ $secondColor: rgb(0, 190, 232);
 
 
                 .errorContainer{
-                    
+                    width: calc(100% - 32px);
 
                     p{
                         font-size: 14px;
@@ -112,7 +112,6 @@ $secondColor: rgb(0, 190, 232);
                             border: 2px solid green;
                         }
                     }
-    
                 }
     
                 input{
@@ -129,8 +128,6 @@ $secondColor: rgb(0, 190, 232);
             .messageContainer{
                 height: 202px;
             }
-
-            
 
             .privatePolicyCheckContainer{
                 width: calc(100% - 32px);
@@ -224,8 +221,6 @@ $secondColor: rgb(0, 190, 232);
         }
     }
 
-
-
     .coloredBgPart{
         position: absolute;
         bottom: -160px;
@@ -236,8 +231,6 @@ $secondColor: rgb(0, 190, 232);
         transform: rotate(90deg);
         z-index: 30;
     }
-
-
 }
 
 .inputDesktop{

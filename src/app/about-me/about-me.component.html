@@ -1,41 +1,44 @@
-<section id="aboutMe"  class="aboutMeSection" *ngIf="!home.impressOn" [ngClass]="{'font20': home.isDesktopXl}">
+<section id="aboutMe" class="aboutMeSection" [ngClass]="{'font20': home.isDesktopXl}">
 
     <div [ngClass]="{'wrapActive-40': home.isDesktop, 'mobileText': home.isMobile}" class="aboutMeText">
-        <h2 data-aos="fade-up" [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopHeadlinesXL': home.isDesktopXl}" translate="">About me</h2>
+        <h2 data-aos="fade-up"
+            [ngClass]="{'desktopHeadlines': home.isDesktop || home.isTablet, 'desktopHeadlinesXL': home.isDesktopXl}"
+            translate="">About me</h2>
         <span data-aos="fade-up" translate="">
-            Hi I'm Jacob, motivated frontend developer with a special focus on web applications based on angular.
-            With the help of the latest technologies, I support you in turning your idea into a finished, unique product.
+            Hi I'm Jacob, Frontend Developer based in Miltenberg, Germany. 
+            Experienced in developing web apps with Javascript and Angular.
             <br>
-            On my never-ending self-development in the "tec-world", I attach particular importance to a humane approach and an honest commitment to the customer.
+            I am passionate about providing solutions for users by building accessible products, 
+            always keeping an eye on clean code principles.
         </span>
-        
+
         <div class="personalText" data-aos="fade-up">
             <img src="../../assets/images/icons/light_bulb_blue.png" alt="">
             <span translate="">
-                I belive that every problem should be met with a positive attitude - writing award-winning code does not happen from a "this can't be done" attitude.
-                <br>
-                I am always ready for a new challenge where I can grow as a human and expand my skill stack.
-            </span> 
+                My goal is to bring ideas to life with code and to continuously expand my knowledge.
+            </span>
         </div>
+
 
         <div class="personalText" data-aos="fade-up">
             <img src="../../assets/images/icons/puzzle_blue.png" alt="">
             <span translate="">
-                The beauty of this industry is that it is full of talented and creative people.
-                <br>
-                I learn something new every day either by my own curiosity or by like-minded code enthusiasts.
+                I'm quietly confident, naturally curious, and perpetually working on improving my chops.
             </span>
         </div>
     </div>
 
     <div [ngClass]="{'wrapActive-40': home.isDesktop}" class="personalImageContainer">
-        <img class="imgColorBg" src="../../assets/images/coloredBgParts/Group 2.png" alt="" [ngClass]="{'personalImgMobile': home.isMobile}">
-        <img class="personalImg" src="../../assets/images/personal_imgs/hero character photo.png" alt="" [ngClass]="{'personalImgMobile': home.isMobile}"> 
-        
+        <img class="imgColorBg" src="../../assets/images/coloredBgParts/Group 2.png" alt=""
+            [ngClass]="{'personalImgMobile': home.isMobile}">
+        <img class="personalImg" src="../../assets/images/personal_imgs/hero character photo.png" alt=""
+            [ngClass]="{'personalImgMobile': home.isMobile}">
+
         <img *ngIf="home.isMobile" class="vector" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
     </div>
 
-    <div class="vectorContainer">
-        <img *ngIf="home.isDesktop" [ngClass]="{'tabletVector': home.isTablet}" class="vectorFullsreen" src="../../assets/images/coloredBgParts/Vector (1).png" alt="">
+    <div class="vectorContainer" [ngClass]="{'vectorXL': home.isDesktopXl}">
+        <img *ngIf="home.isDesktop" class="vectorFullsreen" src="../../assets/images/coloredBgParts/Vector (1).png"
+            alt="">
     </div>
 </section>

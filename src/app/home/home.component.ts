@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ViewportScroller } from '@angular/common';
 import {TranslateService} from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 
 
@@ -17,14 +18,17 @@ export class HomeComponent implements OnInit {
   isDesktop: boolean = false;
   isDesktopXl: boolean = false;
   isTablet: boolean = false;
-  impressOn: boolean = false;
   Breakpoints = Breakpoints;
   currentBreakpoint: string = '';
   mobileNavActice: boolean = false;
   defaultLanguage: boolean = true;
 
 
-  constructor(private breakpointObserver: BreakpointObserver, private viewportScroller: ViewportScroller, public translate: TranslateService) {
+  constructor(
+    private breakpointObserver: BreakpointObserver, 
+    private viewportScroller: ViewportScroller, 
+    public translate: TranslateService,
+    private router: Router) {
 
   }
 
@@ -71,9 +75,6 @@ export class HomeComponent implements OnInit {
     this.isMobile = mobile;
     this.isTablet = tablet;
     this.currentBreakpoint = breakpoint;
-      console.log(this.isDesktopXl);
-
-
   }
 
 
@@ -85,24 +86,24 @@ export class HomeComponent implements OnInit {
   /**
    * Sets the impressOn-variable to true. This will render the impress template.
    */
-  showImpress() {
-    this.impressOn = true;
+  async showImpress() {
+    await this.router.navigateByUrl('impress');
 
     setTimeout(() => {
       this.onClick('impress');
-    }, 100);
+    }, 400);
   }
 
 
   /**
    * Sets the impressOn-variable to false. This will hide the impress template.
    */
-  showContent(elementId: string) {
-    this.impressOn = false;
+  async showContent(elementId: string) {
+    await this.router.navigateByUrl('');
 
     setTimeout(() => {
       this.onClick(elementId);
-    }, 100);
+    }, 400);
   }
 
 

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, HostBinding } from '@angular/core';
 import * as AOS from 'aos';
 
@@ -10,6 +11,10 @@ import * as AOS from 'aos';
 })
 export class AppComponent {
   title = 'portfolio';
+
+
+  constructor(public http: HttpClient) {}
+
 
   ngOnInit() {
     AOS.init();    
