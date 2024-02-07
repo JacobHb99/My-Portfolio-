@@ -22,5 +22,9 @@
 	"This is a sample of my previous projects.": "Das ist eine Probe meiner letzten Projekte.",
 	"My Skills": "Skills",
 	"I have experience in building projects using many frontend technologies.": "Ich habe Erfahrung in der Anwendung von vielen Frontend-Technologien.",
-	"Get in touch": "Kontaktieren"
+	"Get in touch": "Kontaktieren",
+	"A simple jump and run game based on object-oriented programming. Help Rudy find his way home.": "Ein einfaches jump and run Spiel, basierend auf objektorientierter Programmierung",
+	"Task manager inspired by the Kanban system Create and organize tasks using drag and drop functions and assign users.": "Aufgabenmanager nach dem Vorbild des Kanban-Systems Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen und weisen Sie Benutzer zu.",
+	"This is my personal Website based on angular. Feel free to check the code on Github.": "Dies ist meine persönliche Website, die auf Angular basiert. Schauen sie sich gerne Den Code auf GitHub an."
+
 }

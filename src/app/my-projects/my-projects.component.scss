@@ -94,9 +94,9 @@ section {
                     line-height: normal
                 }
 
-                .projectInfo {
+/*                 .projectInfo {
                     text-align: center;
-                }
+                } */
 
                 .btnContainer {
                     display: flex;
@@ -155,6 +155,6 @@ section {
     width: calc(50% - 157px) !important;
 }
 
-.text-align-left{
-    text-align: start !important;
+.text-align-center{
+    text-align: center !important;
 }

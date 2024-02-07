@@ -19,15 +19,17 @@
                 <img src="{{ project.path }}" alt="">
             </div>
 
-            <div class="projectInfosContainer" 
+            <div class="projectInfosContainer"
                 [ngClass]="{'alignItemsStart': home.isDesktop, 'wrapActive-60': home.isDesktop}">
                 <div class="projectName">{{ project.project }}</div>
                 <div class="projectSkill">{{ project.skills }}</div>
-                <div [ngClass]="{'text-align-left': home.isDesktop}" class="projectInfo" translate=""
-                 [ngClass]="{'font20': home.isDesktopXl}">{{ project.info | translate }}</div>
+                <div class="projectInfo" [ngClass]="{'text-align-center': home.isMobile || home.isTablet}" translate=""
+                    [ngClass]="{'font20': home.isDesktopXl}">{{ project.info | translate }}
+                </div>
 
                 <div class="btnContainer">
-                    <a href="{{ project.liveTestPath }}" target="_blank" rel="noopener noreferrer" *ngIf="project.liveTestPath">
+                    <a href="{{ project.liveTestPath }}" target="_blank" rel="noopener noreferrer"
+                        *ngIf="project.liveTestPath">
                         <div class="liveBtn btn" [ngClass]="{'font20': home.isDesktopXl}">Live test</div>
                     </a>
                     <a href="{{ project.gitPath }}" target="_blank" rel="noopener noreferrer">
