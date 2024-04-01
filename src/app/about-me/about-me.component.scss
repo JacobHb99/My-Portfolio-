@@ -39,13 +39,17 @@ $secondColor: rgb(0, 190, 232);
         height: 60vh;
         z-index: 80;
         margin-top: 42px;
-
+        
         .imgColorBg, .personalImg{
-            width: 90%;
+            width: 100%;
             position: absolute;
             bottom: -60px;
-            left: 10%;
+            left: 0;
             object-fit: contain;
+        }
+
+        .personalImg{
+            width: 100%;
         }
         
         .vector{
